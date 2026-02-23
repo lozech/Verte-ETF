@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN 회원관리</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/adminuser.css">
+    <link rel="icon" type="image/png" href="images/favi.png">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/common.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/4aff7483c9.js" crossorigin="anonymous"></script>
+    <script src="js/adminuser.js" defer></script>
+</head>
+<body>
+<section class="adminpage">
+        <div class="adminpage-wrap">
+            <div class="side-menu">
+                <div class="logo"><a href="index.html"><img src="images/logo-footer.png" alt="베르트 로고"></a></div>
+
+            <ul class="menu-list">
+                <li class="adminControl"><a href="admin.html">HOME</a></li>
+                <li class="userControl"><a href="adminuser.html">회원관리</a></li>
+                <li class="priceControl"><a href="adminPrice.html">ETF 시세관리</a></li>
+                <li class="productControl"><a href="adminProduct.html">ETF 종목 정보(Meta) 관리</a></li>
+                <li class="eventControl"><a href="adminEvent.html">이벤트 관리</a></li>
+            </ul>
+            </div>
+            <form class="tablesection">
+                <div class="usertit-wrap">
+                    <h2 class="user-tit">회원관리</h2>
+                    <div>
+                        <button type="button" class="abtn bg-[#055C4D] text-white px-5 py-2 rounded-md hover:bg-[#00A4B7]  text-lg"
+                            onclick="location.href='adduser.html'">
+                            운영자추가등록
+                        </button>
+                    </div>
+                </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="numbering">NO</th>
+                        <th class="nickname">아이디(닉네임)</th>
+                        <th class="mailinfo">이메일</th>
+                        <th class="usertype">회원유형</th>
+                        <th class="dangertype">위험성향</th>
+                        <th class="joindate">가입날짜</th>
+                        <th class="control">관리</th>
+                    </tr>
+                </thead>
+
+                <tbody id="userTbody">
+                    <tr data-userid="15">
+                        <td class="numbering1">15</td>
+                        <td class="nickname1">3333</td>
+                        <td class="mailinfo1">example@gmail.com</td>
+                        <td class="usertype1">
+                            <label class="select border-none px-30 w-30">
+                                <select name="user" class="select select-bordered px-5">
+                                    <option>회원</option>
+                                    <option>admin</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="favtype1">
+                            <label class="select border-none w-35">
+                                <select name="favorite" class="select select-bordered px-5">
+                                    <option>natural</option>
+                                    <option>conservative</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="joindate">
+                            2026-01-07
+                        </td>
+                        <td class="lineCheck">
+                            <div class="flex justify-center items-center gap-1 h-full py-2">
+                                <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">탈퇴</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr data-userid="14">
+                        <td class="numbering1">14</td>
+                        <td class="nickname1"></td>
+                        <td class="mailinfo1"></td>
+                        <td class="usertype1">
+                            <label class="select border-none px-30 w-30">
+                                <select name="user" class="select select-bordered px-5">
+                                    <option>회원</option>
+                                    <option selected>admin</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="favtype1">
+                            <label class="select border-none w-35">
+                                <select name="favorite" class="select select-bordered px-5">
+                                    <option>natural</option>
+                                    <option>conservative</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="joindate">
+                            
+                        </td>
+                        <td class="lineCheck">
+                            <div class="flex justify-center items-center gap-1 h-full py-2">
+                                <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">탈퇴</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr data-userid="13">
+                        <td class="numbering1">13</td>
+                        <td class="nickname1"></td>
+                        <td class="mailinfo1"></td>
+                        <td class="usertype1">
+                            <label class="select border-none px-30 w-30">
+                                <select name="user" class="select select-bordered px-5">
+                                    <option>회원</option>
+                                    <option>admin</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="favtype1">
+                            <label class="select border-none w-35">
+                                <select name="favorite" class="select select-bordered px-5">
+                                    <option>natural</option>
+                                    <option>conservative</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="joindate">
+                            
+                        </td>
+                        <td class="lineCheck">
+                            <div class="flex justify-center items-center gap-1 h-full py-2">
+                                <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">탈퇴</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr data-userid="12">
+                        <td class="numbering1">12</td>
+                        <td class="nickname1"></td>
+                        <td class="mailinfo1"></td>
+                        <td class="usertype1">
+                            <label class="select border-none px-30 w-30">
+                                <select name="user" class="select select-bordered px-5">
+                                    <option>회원</option>
+                                    <option>admin</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="favtype1">
+                            <label class="select border-none w-35">
+                                <select name="favorite" class="select select-bordered px-5">
+                                    <option>natural</option>
+                                    <option>conservative</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="joindate">
+                            
+                        </td>
+                        <td class="lineCheck">
+                            <div class="flex justify-center items-center gap-1 h-full py-2">
+                                <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">탈퇴</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr data-userid="11">
+                        <td class="numbering1">11</td>
+                        <td class="nickname1"></td>
+                        <td class="mailinfo1"></td>
+                        <td class="usertype1">
+                            <label class="select border-none px-30 w-30">
+                                <select name="user" class="select select-bordered px-5">
+                                    <option>회원</option>
+                                    <option>admin</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="favtype1">
+                            <label class="select border-none w-35">
+                                <select name="favorite" class="select select-bordered px-5">
+                                    <option>natural</option>
+                                    <option>conservative</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="joindate">
+                            
+                        </td>
+                        <td class="lineCheck">
+                            <div class="flex justify-center items-center gap-1 h-full py-2">
+                                <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">탈퇴</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr data-userid="10">
+                        <td class="numbering1">10</td>
+                        <td class="nickname1"></td>
+                        <td class="mailinfo1"></td>
+                        <td class="usertype1">
+                            <label class="select border-none px-30 w-30">
+                                <select name="user" class="select select-bordered px-5">
+                                    <option>회원</option>
+                                    <option>admin</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="favtype1">
+                            <label class="select border-none w-35">
+                                <select name="favorite" class="select select-bordered px-5">
+                                    <option>natural</option>
+                                    <option>conservative</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="joindate">
+                            
+                        </td>
+                        <td class="lineCheck">
+                            <div class="flex justify-center items-center gap-1 h-full py-2">
+                                <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">탈퇴</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr data-userid="9">
+                        <td class="numbering1">9</td>
+                        <td class="nickname1"></td>
+                        <td class="mailinfo1"></td>
+                        <td class="usertype1">
+                            <label class="select border-none px-30 w-30">
+                                <select name="user" class="select select-bordered px-5">
+                                    <option>회원</option>
+                                    <option>admin</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="favtype1">
+                            <label class="select border-none w-35">
+                                <select name="favorite" class="select select-bordered px-5">
+                                    <option>natural</option>
+                                    <option>conservative</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="joindate">
+                            
+                        </td>
+                        <td class="lineCheck">
+                            <div class="flex justify-center items-center gap-1 h-full py-2">
+                                <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">탈퇴</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="numbering1">8</td>
+                        <td class="nickname1"></td>
+                        <td class="mailinfo1"></td>
+                        <td class="usertype1">
+                            <label class="select border-none px-30 w-30">
+                                <select name="user" class="select select-bordered px-5">
+                                    <option>회원</option>
+                                    <option>admin</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="favtype1">
+                            <label class="select border-none w-35">
+                                <select name="favorite" class="select select-bordered px-5">
+                                    <option>natural</option>
+                                    <option>conservative</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="joindate">
+                            
+                        </td>
+                        <td class="lineCheck">
+                            <div class="flex justify-center items-center gap-1 h-full py-2">
+                                <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">탈퇴</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr data-userid="7">
+                        <td class="numbering1">7</td>
+                        <td class="nickname1"></td>
+                        <td class="mailinfo1"></td>
+                        <td class="usertype1">
+                            <label class="select border-none px-30 w-30">
+                                <select name="user" class="select select-bordered px-5">
+                                    <option>회원</option>
+                                    <option>admin</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="favtype1">
+                            <label class="select border-none w-35">
+                                <select name="favorite" class="select select-bordered px-5">
+                                    <option>natural</option>
+                                    <option>conservative</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="joindate">
+                            
+                        </td>
+                        <td class="lineCheck">
+                            <div class="flex justify-center items-center gap-1 h-full py-2">
+                                <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">탈퇴</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr data-userid="6">
+                        <td class="numbering1">6</td>
+                        <td class="nickname1"></td>
+                        <td class="mailinfo1"></td>
+                        <td class="usertype1">
+                            <label class="select border-none px-30 w-30">
+                                <select name="user" class="select select-bordered px-5">
+                                    <option>회원</option>
+                                    <option>admin</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="favtype1">
+                            <label class="select border-none w-35">
+                                <select name="favorite" class="select select-bordered px-5">
+                                    <option>natural</option>
+                                    <option>conservative</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="joindate">
+                            
+                        </td>
+                        <td class="lineCheck">
+                            <div class="flex justify-center items-center gap-1 h-full py-2">
+                                <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">탈퇴</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr data-userid="5">
+                        <td class="numbering1">5</td>
+                        <td class="nickname1"></td>
+                        <td class="mailinfo1"></td>
+                        <td class="usertype1">
+                            <label class="select border-none px-30 w-30">
+                                <select name="user" class="select select-bordered px-5">
+                                    <option>회원</option>
+                                    <option>admin</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="favtype1">
+                            <label class="select border-none w-35">
+                                <select name="favorite" class="select select-bordered px-5">
+                                    <option>natural</option>
+                                    <option>conservative</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="joindate">
+                            
+                        </td>
+                        <td class="lineCheck">
+                            <div class="flex justify-center items-center gap-1 h-full py-2">
+                                <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">탈퇴</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr data-userid="4">
+                        <td class="numbering1">4</td>
+                        <td class="nickname1"></td>
+                        <td class="mailinfo1"></td>
+                        <td class="usertype1">
+                            <label class="select border-none px-30 w-30">
+                                <select name="user" class="select select-bordered px-5">
+                                    <option>회원</option>
+                                    <option>admin</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="favtype1">
+                            <label class="select border-none w-35">
+                                <select name="favorite" class="select select-bordered px-5">
+                                    <option>natural</option>
+                                    <option>conservative</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="joindate">
+                            
+                        </td>
+                        <td class="lineCheck">
+                            <div class="flex justify-center items-center gap-1 h-full py-2">
+                                <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">탈퇴</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr data-userid="3">
+                        <td class="numbering1">3</td>
+                        <td class="nickname1"></td>
+                        <td class="mailinfo1"></td>
+                        <td class="usertype1">
+                            <label class="select border-none px-30 w-30">
+                                <select name="user" class="select select-bordered px-5">
+                                    <option>회원</option>
+                                    <option>admin</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="favtype1">
+                            <label class="select border-none w-35">
+                                <select name="favorite" class="select select-bordered px-5">
+                                    <option>natural</option>
+                                    <option>conservative</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="joindate">
+                            
+                        </td>
+                        <td class="lineCheck">
+                            <div class="flex justify-center items-center gap-1 h-full py-2">
+                                <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">탈퇴</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr data-userid="2">
+                        <td class="numbering1">2</td>
+                        <td class="nickname1"></td>
+                        <td class="mailinfo1"></td>
+                        <td class="usertype1">
+                            <label class="select border-none px-30 w-30">
+                                <select name="user" class="select select-bordered px-5">
+                                    <option>회원</option>
+                                    <option>admin</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="favtype1">
+                            <label class="select border-none w-35">
+                                <select name="favorite" class="select select-bordered px-5">
+                                    <option>natural</option>
+                                    <option>conservative</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="joindate">
+                            
+                        </td>
+                        <td class="lineCheck">
+                            <div class="flex justify-center items-center gap-1 h-full py-2">
+                                <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">탈퇴</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr data-userid="1">
+                        <td class="numbering1">1</td>
+                        <td class="nickname1"></td>
+                        <td class="mailinfo1"></td>
+                        <td class="usertype1">
+                            <label class="select border-none px-30 w-30">
+                                <select name="user" class="select select-bordered px-5">
+                                    <option>회원</option>
+                                    <option>admin</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="favtype1">
+                            <label class="select border-none w-35">
+                                <select name="favorite" class="select select-bordered px-5">
+                                    <option>natural</option>
+                                    <option>conservative</option>
+                                </select>
+                            </label>
+                        </td>
+                        <td class="joindate">
+                            
+                        </td>
+                        <td class="lineCheck">
+                            <div class="flex justify-center items-center gap-1 h-full py-2">
+                                <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">탈퇴</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="mbtn btn btn-outline flex justify-center"><button type="button" onclick="" class="more">더보기 +</button></div>
+            </form>
+    </div>
+</section>
+
+    
+</body>
+</html>

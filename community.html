@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자유게시판</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/community.css">
+    <link rel="icon" type="image/png" href="images/favi.png">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/common.js" defer></script>
+    <script src="js/community.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <div class="header-wrap">
+            <h1 class="logo"><a href="index.html"><img src="images/logo-header.png" alt="베르트 로고"></a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li>
+                        <a href="#">회사 소개</a>
+                        <ul class="sub">
+                            <li><a href="#">Verte ETF 소개</a></li>
+                            <li><a href="#">경영 정보</a></li>
+                            <li><a href="#">ESG 경영</a></li>
+                            <li><a href="#">인재 채용</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">ETF 정보</a>
+                        <ul class="sub">
+                            <li><a href="compare.html">ETF 비교·랭킹</a></li>
+                            <li><a href="search.html">ETF 라인업</a></li>
+                            <li><a href="#">ETF 트렌드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">MY ETF</a>
+                        <ul class="sub">
+                            <li><a href="personal.html">개인 맞춤형 추천</a></li>
+                            <li><a href="portfolio.html">포트폴리오 제안</a></li>
+                            <li><a href="fortune.html">오늘의 투자 운세</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">투자 정보</a>
+                        <ul class="sub">
+                            <li><a href="#">시장 전망</a></li>
+                            <li><a href="#">ETF 투자 정보</a></li>
+                            <li><a href="#">연금 투자</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="event.html">이벤트</a></li>
+                            <li><a href="community.html">자유게시판</a></li>
+                            <li><a href="news.html">ETF 뉴스</a></li>
+                            <li><a href="#">Q & A</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-btn">
+                <a href="join.html"><button>Join</button></a>
+                <a href="login.html"><button>Login</button></a>
+                <a href="mypage.html"><button>Mypage</button></a>
+            </div>
+        </div>
+    </header>
+    <section class="tab-location">
+        <div class="tabs">
+            <p>커뮤니티<span>></span></p>
+            <p class="selection">자유게시판</p>
+        </div>
+    </section> 
+    <h2 class="boardName">자유게시판</h2>
+    <form class="freeboard">
+        <nav class="bestArea">
+            <div class="window-header">
+                    <div class="dot-group">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="header-line"></div>
+            </div>
+            <ul class="bestbg bg1" onclick="location.href='communitydetail.html'">
+                <li class="window-header">
+                    <div class="dot-group">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="header-line"></div>
+                </li>
+                <li class="bestcont">
+                    <ul>
+                        <li class="nickbg"></li>
+                        <li class="profile"></li>
+                        <li class="nickName">Noah Thomson</li>
+                        <li class="besttit">월배당 상품의 분배금 지급 기준일, 분배락일, 지급 예정일을 알고 싶어요.</li>
+                        <li class="num">
+                            <ul class="num1">
+                                <li class="loadNum numbg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                    </svg>
+                                    <p class="views">547</p>
+                                </li>
+                                <li class="likeNum numbg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+                                    </svg>
+                                    <p class="likes">681</p>
+                                </li>
+                                <li class="bookNum numbg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l2.262 6.945h7.355c.969 0 1.371 1.24.588 1.81l-5.946 4.32 2.262 6.945c.3.921-.755 1.688-1.539 1.118l-5.946-4.32-5.946 4.32c-.783.57-1.838-.197-1.539-1.118l2.262-6.945-5.946-4.32c-.783-.57-.38-1.81.588-1.81h7.355l2.262-6.945z"/>
+                                    </svg>
+                                    <p class="bookmarks">912</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="bestbg bg2" onclick="location.href='communitydetail2.html'">
+                <li class="window-header">
+                    <div class="dot-group">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="header-line"></div>
+                </li>
+                <li class="bestcont">
+                    <ul>
+                        <li class="nickbg"></li>
+                        <li class="profile"></li>
+                        <li class="nickName">ick kitty</li>
+                        <li class="besttit">
+                            국내 상장 ETF와 해외(역외) 상장 ETF와의 차이가 무엇인가요?</li>
+                        <li class="num">
+                            <ul class="num1">
+                                <li class="loadNum numbg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                    </svg>
+                                    <p class="views">281</p>
+                                </li>
+                                <li class="likeNum numbg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+                                    </svg>
+                                    <p class="likes">391</p>
+                                </li>
+                                <li class="bookNum numbg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l2.262 6.945h7.355c.969 0 1.371 1.24.588 1.81l-5.946 4.32 2.262 6.945c.3.921-.755 1.688-1.539 1.118l-5.946-4.32-5.946 4.32c-.783.57-1.838-.197-1.539-1.118l2.262-6.945-5.946-4.32c-.783-.57-.38-1.81.588-1.81h7.355l2.262-6.945z"/>
+                                    </svg>
+                                    <p class="bookmarks">29</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="bestbg bg3" onclick="location.href='communitydetail3.html'">
+                <li class="window-header">
+                    <div class="dot-group">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="header-line"></div>
+                </li>
+                <li class="bestcont">
+                    <ul>
+                        <li class="nickbg"></li>
+                        <li class="profile"></li>
+                        <li class="nickName">Bon appetit</li>
+                        <li class="besttit">
+                        금일 레버리지 ETF의 수익률이 왜 시장 수익률의 2배와 차이가 나나요?</li>
+                        <li class="num">
+                            <ul class="num1">
+                                <li class="loadNum numbg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                    </svg>
+                                    <p class="views">3282</p>
+                                </li>
+                                <li class="likeNum numbg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+                                    </svg>
+                                    <p class="likes">401</p>
+                                </li>
+                                <li class="bookNum numbg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l2.262 6.945h7.355c.969 0 1.371 1.24.588 1.81l-5.946 4.32 2.262 6.945c.3.921-.755 1.688-1.539 1.118l-5.946-4.32-5.946 4.32c-.783.57-1.838-.197-1.539-1.118l2.262-6.945-5.946-4.32c-.783-.57-.38-1.81.588-1.81h7.355l2.262-6.945z"/>
+                                    </svg>
+                                    <p class="bookmarks">391</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="flex justify-center postBtnBg">
+            <button type="button" class="btn btn-outline border border-[#1d7a5548] 
+            text-[#1A1A1A] hover:bg-[#1D7A55] hover:border-[#1D7A55] hover:text-white postBtn">게시글 작성</button>
+        </div>
+        
+        <table>
+            <thead>
+                <th class="title1">제목</th>
+                <th class="loadnum1">조회수</th>
+                <th class="like1">좋아요</th>
+                <th class="enterdate">등록일</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="realtit"><a href="communitydetail.html">
+                        월배당 상품의 분배금 지급 기준일, 분배락일, 지급 예정일을 알고 싶어요.</a></td>
+                    <td class="loadnum">547</td>
+                    <td class="like">681</td>
+                    <td class="realdate">2025-05-26</td>
+                </tr>
+                <tr>
+                    <td class="realtit">
+                        <a href="communitydetail2.html">국내 상장 ETF와 해외(역외) 상장 ETF와의 차이가 무엇인가요?</a>
+                    </td>
+                    <td class="loadnum">281</td>
+                    <td class="like">391</td>
+                    <td class="realdate">2025-05-23</td>
+                </tr>
+                <tr>
+                    <td class="realtit">
+                        <a href="communitydetail3.html">
+                        금일 레버리지 ETF의 수익률이 왜 시장 수익률의 2배와 차이가 나나요?</a>
+                    </td>
+                    <td class="loadnum">3282</td>
+                    <td class="like">401</td>
+                    <td class="realdate">2025-05-19</td>
+                </tr>
+                <tr>
+                    <td class="realtit">
+                        <a href="communitydetail4.html">
+                        금일 KOSPI200지수가 플러스(+)임에도 레버리지 ETF 성과가 마이너스(-)인 이유는 무엇인가요?</a>
+                    </td>
+                    <td class="loadnum">25</td>
+                    <td class="like">14</td>
+                    <td class="realdate">2025-04-15</td>
+                </tr>
+                <tr>
+                    <td class="realtit">
+                        <a href="communitydetail5.html">
+                        금일 인버스 ETF의 수익률이 왜 시장 수익률의 -1배와 차이가 나나요?</a>
+                    </td>
+                    <td class="loadnum">41</td>
+                    <td class="like">20</td>
+                    <td class="realdate">2025-03-22</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </form>
+    <footer>
+        <div class="footer-wrap">
+            <div class="footer-left">
+                <h1 class="logo"><a href="index.html"><img src="images/logo-footer.png" alt="베르트 로고 (화이트)"></a></h1>          
+            </div>
+
+            <div class="footer-right">
+
+                <ul class="footer-menu">
+                    <li>상호명 : 주식회사 베르트</li>
+                    <li>사업자등록번호 : 640-81-01354</li>
+                    <li>대표전화 : 031-902-1777</li>
+                    <li>EMAIL: verte@gmail.com </li>
+                    <li>경기도 고양시 일산동구 중앙로1275번길 38-10</li>
+                    <li>상담시간 : 평일 오전 9:00~오후 5:00</li>
+                    <li>점심시간 : 12:00 - 13:00(토-일요일,공휴일 휴무)</li>
+                </ul>
+                <p class="copyright">Copyright(C) 2025 VERTE MANAGEMENT CO. LTD. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

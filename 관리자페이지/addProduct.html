@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN 신규종목등록</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/addProduct.css">
+    <link rel="icon" type="image/png" href="images/favi.png">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/common.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/4aff7483c9.js" crossorigin="anonymous"></script>
+    <script src="js/addProduct.js" defer></script>
+</head>
+<body>
+<section class="adminpage">
+    <div class="adminpage-wrap">
+            <div class="side-menu">
+                    <div class="logo"><a href="index.html"><img src="images/logo-footer.png" alt="베르트 로고"></a></div>
+
+                <ul class="menu-list">
+                    <li class="adminControl"><a href="admin.html">HOME</a></li>
+                    <li class="userControl"><a href="adminuser.html">회원관리</a></li>
+                    <li class="priceControl"><a href="adminPrice.html">ETF 시세관리</a></li>
+                    <li class="productControl"><a href="adminProduct.html">ETF 종목 정보(Meta) 관리</a></li>
+                    <li class="eventControl"><a href="adminEvent.html">이벤트 관리</a></li>
+                </ul>
+            </div>  
+
+        <form class="addForm">
+            <div role="tablist" class="tabs tabs-border justify-start w-full mt-[20px] mb-[-140px]">
+                <a href="adminProduct.html" role="tab" class="tab mx-4 noticepage text-[18px] text-gray-500">ETF 종목 정보(Meta) 관리</a>
+                <a href="#" role="tab" class="tab mx-4 noticepage text-[18px] text-gray-500">></a>
+                <a href="addProduct.html" role="tab" class="tab mx-4 freepage text-[18px] text-gray-500 font-bold">신규 종목 등록</a>
+            </div>
+            <fieldset>
+                <legend><span>신규 종목 등록</span></legend>
+                <table>
+                    <tr class="proID">
+                        <td class="td-col">
+                            ETF ID
+                            <input type="text" placeholder="예: KR0000488980">
+                        </td>
+                    </tr>
+                    <tr class="proName">
+                        <td class="td-col">
+                            ETF 종목명
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr class="proTheme">
+                        <td class="td-col">
+                            테마
+                            <select name="thema" class="select select-bordered">
+                                        <option>채권/금리</option>
+                                        <option>파생(인버스)</option>
+                                        <option>해외주식</option>
+                                        <option>해외주식(미국)</option>
+                                        <option>단기자금/MMF</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="proDanger">
+                        <td class="td-col">
+                            위험등급
+                            <select name="dangerlevel" class="select select-bordered">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="proExp">
+                        <td class="td-col">
+                            보수등급
+                            <select name="conlevel" class="select select-bordered">
+                                        <option>mid</option>
+                                        <option>high</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="proIsin">
+                        <td class="td-col">
+                            ISIN 코드
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="flex justify-center items-center gap-[20px]">
+                            <button type="button" class="s-btn w-[200px] h-[48px] bg-[#467261] text-white rounded-md text-[15px] font-medium transition hover:bg-[#365a4c] mt-[50px] mb-[50px]">
+                            저장하기
+                            </button>
+                            <button type="button" class="c-btn w-[200px] h-[48px] border-2 border-[#467261] rounded-md text-[15px] font-medium transition hover:bg-[#467261] hover:text-white mt-[50px] mb-[50px]">
+                            취소
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+</section>    
+</body>
+</html>

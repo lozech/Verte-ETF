@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자유게시판</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/communityWrite.css">
+    <link rel="icon" type="image/png" href="images/favi.png">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/common.js" defer></script>
+    <script src="js/communityWrite.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/4aff7483c9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header-wrap">
+            <h1 class="logo"><a href="index.html"><img src="images/logo-header.png" alt="베르트 로고"></a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li>
+                        <a href="#">회사 소개</a>
+                        <ul class="sub">
+                            <li><a href="#">Verte ETF 소개</a></li>
+                            <li><a href="#">경영 정보</a></li>
+                            <li><a href="#">ESG 경영</a></li>
+                            <li><a href="#">인재 채용</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">ETF 정보</a>
+                        <ul class="sub">
+                            <li><a href="compare.html">ETF 비교·랭킹</a></li>
+                            <li><a href="search.html">ETF 라인업</a></li>
+                            <li><a href="#">ETF 트렌드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">MY ETF</a>
+                        <ul class="sub">
+                            <li><a href="personal.html">개인 맞춤형 추천</a></li>
+                            <li><a href="portfolio.html">포트폴리오 제안</a></li>
+                            <li><a href="fortune.html">오늘의 투자 운세</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">투자 정보</a>
+                        <ul class="sub">
+                            <li><a href="#">시장 전망</a></li>
+                            <li><a href="#">ETF 투자 정보</a></li>
+                            <li><a href="#">연금 투자</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="event.html">이벤트</a></li>
+                            <li><a href="community.html">자유게시판</a></li>
+                            <li><a href="news.html">ETF 뉴스</a></li>
+                            <li><a href="#">Q & A</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-btn">
+                <a href="join.html"><button>Join</button></a>
+                <a href="login.html"><button>Login</button></a>
+                <a href="mypage.html"><button>Mypage</button></a>
+            </div>
+        </div>
+    </header>
+    <section class="tab-location">
+        <div class="tabs">
+            <p>커뮤니티<span>></span></p>
+            <p>자유게시판<span>></span></p>
+            <p class="selection">게시글작성</p>
+        </div>
+        <h2>자유게시판</h2>
+        <ul class="writeHead">
+            <li class="writeHeadline">게시글 작성</li>
+            <li class="flex justify-end postBtnBg">
+                <button class="btn btn-outline border border-[#1d7a5548] text-[#1A1A1A] hover:bg-[#1D7A55] 
+                hover:border-[#1D7A55] hover:text-white tracking-wide postBtn">게시글 작성</button>
+            </li>
+        </ul>
+    </section>
+    <section class="writeDetail">
+        <div class="writeTitle">
+            <ul class="titLine">
+                <li><input type="text" class="tit" placeholder="제목을 입력하세요"></input></li>
+                <li><i class="fa-regular fa-image"></i></li>
+            </ul>
+        </div>
+        <div class="writeContent">
+            <ul class="userInfo">
+                <li class="nickname"><b>작성자 : </b> <span>maiapa21</span></li>
+                <li class="enterdate"><b>작성일자 : </b> <span>2025-05-26</span></li>
+            </ul>
+            <textarea name="content" id="writeContent" placeholder="내용을 입력하세요"></textarea>
+        </div>
+    </section>
+    <div class="flex justify-center mBtnBg">
+            <button type="button" class="mbtn btn btn-outline border border-[#1d7a5548] text-[#1A1A1A] hover:bg-[#1D7A55] hover:border-[#1D7A55] hover:text-white px-8 py-3 text-xm 
+            font-medium tracking-wide">목록보기</button>
+    </div>
+    <footer>
+        <div class="footer-wrap">
+            <div class="footer-left">
+                <h1 class="logo"><a href="index.html"><img src="images/logo-footer.png" alt="베르트 로고 (화이트)"></a></h1>          
+            </div>
+
+            <div class="footer-right">
+
+                <ul class="footer-menu">
+                    <li>상호명 : 주식회사 베르트</li>
+                    <li>사업자등록번호 : 640-81-01354</li>
+                    <li>대표전화 : 031-902-1777</li>
+                    <li>EMAIL: verte@gmail.com </li>
+                    <li>경기도 고양시 일산동구 중앙로1275번길 38-10</li>
+                    <li>상담시간 : 평일 오전 9:00~오후 5:00</li>
+                    <li>점심시간 : 12:00 - 13:00(토-일요일,공휴일 휴무)</li>
+                </ul>
+                <p class="copyright">Copyright(C) 2025 VERTE MANAGEMENT CO. LTD. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

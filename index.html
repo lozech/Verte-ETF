@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verte ETF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="images/favi.png">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <script src="js/main.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <div class="header-wrap">
+            <h1 class="logo"><a href="index.html"><img src="images/logo-header.png" alt="베르트 로고"></a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li>
+                        <a href="#">회사 소개</a>
+                        <ul class="sub">
+                            <li><a href="#">Verte ETF 소개</a></li>
+                            <li><a href="#">경영 정보</a></li>
+                            <li><a href="#">ESG 경영</a></li>
+                            <li><a href="#">인재 채용</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">ETF 정보</a>
+                        <ul class="sub">
+                            <li><a href="compare.html">ETF 비교·랭킹</a></li>
+                            <li><a href="search.html">ETF 라인업</a></li>
+                            <li><a href="#">ETF 트렌드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">MY ETF</a>
+                        <ul class="sub">
+                            <li><a href="personal.html">개인 맞춤형 추천</a></li>
+                            <li><a href="portfolio.html">포트폴리오 제안</a></li>
+                            <li><a href="fortune.html">오늘의 투자 운세</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">투자 정보</a>
+                        <ul class="sub">
+                            <li><a href="#">시장 전망</a></li>
+                            <li><a href="#">ETF 투자 정보</a></li>
+                            <li><a href="#">연금 투자</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="event.html">이벤트</a></li>
+                            <li><a href="community.html">자유게시판</a></li>
+                            <li><a href="news.html">ETF 뉴스</a></li>
+                            <li><a href="#">Q & A</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-btn">
+                <button><a href="join.html">Join</a></button>
+                <a href="login.html"><button>Login</button></a>
+                <a href="mypage.html"><button>Mypage</button></a>
+            </div>
+        </div>
+    </header>
+    
+
+    <main>
+        <section id="search">
+            <div class="circle"></div>
+            <div class="transition-box">
+                <h2>
+                    투자의 새로운 기준,<br/>
+                    <span>Verte ETF</span>
+                </h2>
+                <p>ETF 시장의 흐름을 읽는 가장 스마트한 방법</p>
+                <div class="search-wrap">
+                    <input type="text" class="search-bar">
+                    <button class="search-btn">검색</button>
+                </div>
+                <ul class="word-list">
+                    <li>추천검색어:</li>
+                    <li>#반도체</li>
+                    <li>#월배당</li>
+                    <li>#AI테크</li>
+                    <li>#인도</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="banners">
+            <ul class="banner-list">
+                <li>
+                    <a href="">
+                        <p class="text-top">• 신규상장(1/20) •</p>
+                        <h3>
+                            새로운 기준의 진짜 고배당주 등장,<br/>
+                            정책 수혜 기대와 성장을 동시에!
+                        </h3>
+                        <p class="etf-name">KODEX 주주환원고배당주 ETF</p>
+                        <p class="etf-ticker">0153K0</p>
+                        <img src="images/banner1.png" alt="배너 아이콘 1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <p class="text-top">• 신규상장(1/13) •</p>
+                        <h3>
+                            AI 반도체 선두주자 TOP3에 집중 투자
+                        </h3>
+                        <p class="etf-name">KODEX 미국AI반도체TOP3플러스 ETF</p>
+                        <p class="etf-ticker">0151S0</p>
+                        <img src="images/banner2.png" alt="배너 아이콘 2">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <p class="text-top">• 지금 핫한 ETF •</p>
+                        <h3>
+                            삼성이 잘하는 것, 반도체!<br/>
+                            AI반도체 투자는 역시 삼성 KODEX ETF!
+                        </h3>
+                        <p class="etf-name">KODEX AI반도체 ETF</p>
+                        <p class="etf-ticker">395160</p>
+                        <img src="images/banner3.png" alt="배너 아이콘 3">
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- chat icon -->
+        <section class="bot-area">
+            <div class="greenbox">
+            </div>
+            <div id="main-bot" class="bot-icon">
+                <img src="images/robot.png" alt="">
+            </div>
+            <div class="chatbot-wrap">
+                <div class="chatbot">
+                    <!-- chat header -->
+                    <div class="chatbot-header">
+                        <div class="bot-icon"><img src="images/robot.png" alt=""></div>
+                        <h3>챗봇 문의</h3>
+                    </div>
+                    <!-- 채팅 영역 -->
+                    <div class="chat-area">
+                        <div class="chat-fixed">
+                            <div class="bubble bot">
+                            안녕하세요,<br />
+                            무엇을 도와드릴까요?
+                            </div>
+
+                            <div class="quick-buttons">
+                                <button data-answer="ETF는 여러 종목을 하나로 묶어 주식처럼 거래할 수 있는 상품이에요.">
+                                    ETF가 뭐야?
+                                </button>
+                                <button data-answer="현재 KOSPI 지수는 장중 변동이 있으며 실시간 정보 확인이 필요해요.">
+                                    현재 KOSPI 지수는?
+                                </button>
+                                <button data-answer="투자 성향에 따라 안정형, 균형형, 성장형 ETF가 달라요.">
+                                    ETF 추천해줘
+                                </button>
+                                <button data-answer="변동성이 낮은 채권형 ETF가 리스크가 낮아요.">
+                                    리스크가 낮은 ETF
+                                </button>
+                                <button  data-action="reset">
+                                    질문 초기화
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="chat-log">
+                            <div class="bubble user">
+                            ETF가 뭐야?
+                            </div>
+
+                            <div class="bubble bot">
+                            ETF는 여러 종목을 하나의 바구니에 담아<br />
+                            주식처럼 거래할 수 있는 상품이에요.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- 입력창 -->
+                    <div class="chat-input">
+                        <input type="text" placeholder="질문을 직접 입력해 보세요" />
+                        <button>➤</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="event">
+            <ul class="event-list">
+                <li>
+                    <a href="" target="_blank">
+                        <img src="images/event1.png" alt="이벤트 배너 1">
+                        <h3>요즘 대세 국장 대표 ETF 매수 이벤트</h3>
+                        <p>이벤트기간 | 2026.01.05 ~ 2026.01.28</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="" target="_blank">
+                        <img src="images/event2.png" alt="이벤트 배너 2">
+                        <h3>KODEX 반도체 ETF 매수 이벤트</h3>
+                        <p>이벤트기간 | 2026.01.05 ~ 2026.01.28</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.samsungfund.com/etf/lounge/event-view.do?seq=69" target="_blank">
+                        <img src="images/event3.png" alt="이벤트 배너 3">
+                        <h3>KODEX 배당맛집 분배금 인증 이벤트</h3>
+                        <p>이벤트기간 | 2025.09.11 ~ 2026.02.04</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.samsungfund.com/etf/lounge/event-view.do?seq=69" target="_blank">
+                        <img src="images/event4.png" alt="이벤트 배너 4">
+                        <h3>KODEX ETF 증권사 이벤트 안내</h3>
+                        <p>이벤트기간 | 2026.01.01 ~ 2026.12.31</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="recommend">
+            <div class="left">
+                <h2>추천 ETF<br/>한눈에 보기</h2>
+                <p>지금 가장 핫한 ETF를 만나보세요.</p>
+                <ul class="tab-btn">
+                    <li class="active">인기 해외 ETF</li>
+                    <li>인기 국내 ETF</li>
+                    <li>안전형 채권/금리 ETF</li>
+                    <li>안전형 단기자금 ETF</li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul class="etf-list list1 active">
+                    <li class="rank1">
+                        <a href="detailpage.html">
+                            <p class="rank-num">1</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국S&P500(탭1)</h4>
+                            <p class="etf-ticker">379800</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #4594DF;">-0.7%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>22,500원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="rank2">
+                        <a href="detailpage.html">
+                            <p class="rank-num">2</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국나스닥100</h4>
+                            <p class="etf-ticker">379810</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #F04452">0.4%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>24,610원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="rank3">
+                        <a href="detailpage.html">
+                            <p class="rank-num">3</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국S&P500</h4>
+                            <p class="etf-ticker">379800</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #4594DF;">-0.7%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>22,500원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="rank4">
+                        <a href="detailpage.html">
+                            <p class="rank-num">4</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국나스닥100</h4>
+                            <p class="etf-ticker">379810</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #F04452">0.4%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>24,610원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="rank5">
+                        <a href="detailpage.html">
+                            <p class="rank-num">5</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국S&P500</h4>
+                            <p class="etf-ticker">379800</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #4594DF;">-0.7%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>22,500원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="rank6">
+                        <a href="detailpage.html">
+                            <p class="rank-num">6</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국나스닥100</h4>
+                            <p class="etf-ticker">379810</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #F04452">0.4%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>24,610원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="etf-list list2">
+                    <li class="rank1">
+                        <a href="detailpage.html">
+                            <p class="rank-num">1</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국S&P500(탭2)</h4>
+                            <p class="etf-ticker">379800</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #4594DF;">-0.7%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>22,500원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="rank2">
+                        <a href="detailpage.html">
+                            <p class="rank-num">2</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국나스닥100</h4>
+                            <p class="etf-ticker">379810</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #F04452">0.4%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>24,610원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="rank3">
+                        <a href="detailpage.html">
+                            <p class="rank-num">3</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국S&P500</h4>
+                            <p class="etf-ticker">379800</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #4594DF;">-0.7%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>22,500원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="rank4">
+                        <a href="detailpage.html">
+                            <p class="rank-num">4</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국나스닥100</h4>
+                            <p class="etf-ticker">379810</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #F04452">0.4%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>24,610원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="rank5">
+                        <a href="detailpage.html">
+                            <p class="rank-num">5</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국S&P500</h4>
+                            <p class="etf-ticker">379800</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #4594DF;">-0.7%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>22,500원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="rank6">
+                        <a href="detailpage.html">
+                            <p class="rank-num">6</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국나스닥100</h4>
+                            <p class="etf-ticker">379810</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #F04452">0.4%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>24,610원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="etf-list list3">
+                    <li class="rank1">
+                        <a href="detailpage.html">
+                            <p class="rank-num">1</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국S&P500(탭3)</h4>
+                            <p class="etf-ticker">379800</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #4594DF;">-0.7%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>22,500원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="rank2">
+                        <a href="detailpage.html">
+                            <p class="rank-num">2</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국나스닥100</h4>
+                            <p class="etf-ticker">379810</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #F04452">0.4%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>24,610원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="rank3">
+                        <a href="detailpage.html">
+                            <p class="rank-num">3</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국S&P500</h4>
+                            <p class="etf-ticker">379800</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #4594DF;">-0.7%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>22,500원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="rank4">
+                        <a href="detailpage.html">
+                            <p class="rank-num">4</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국나스닥100</h4>
+                            <p class="etf-ticker">379810</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #F04452">0.4%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>24,610원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="rank5">
+                        <a href="detailpage.html">
+                            <p class="rank-num">5</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국S&P500</h4>
+                            <p class="etf-ticker">379800</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #4594DF;">-0.7%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>22,500원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="rank6">
+                        <a href="detailpage.html">
+                            <p class="rank-num">6</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국나스닥100</h4>
+                            <p class="etf-ticker">379810</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #F04452">0.4%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>24,610원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="etf-list list4">
+                    <li class="rank1">
+                        <a href="detailpage.html">
+                            <p class="rank-num">1</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국S&P500(탭4)</h4>
+                            <p class="etf-ticker">379800</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #4594DF;">-0.7%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>22,500원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="rank2">
+                        <a href="detailpage.html">
+                            <p class="rank-num">2</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국나스닥100</h4>
+                            <p class="etf-ticker">379810</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #F04452">0.4%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>24,610원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="rank3">
+                        <a href="detailpage.html">
+                            <p class="rank-num">3</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국S&P500</h4>
+                            <p class="etf-ticker">379800</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #4594DF;">-0.7%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>22,500원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="rank4">
+                        <a href="detailpage.html">
+                            <p class="rank-num">4</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국나스닥100</h4>
+                            <p class="etf-ticker">379810</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #F04452">0.4%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>24,610원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="rank5">
+                        <a href="detailpage.html">
+                            <p class="rank-num">5</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국S&P500</h4>
+                            <p class="etf-ticker">379800</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #4594DF;">-0.7%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>22,500원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="rank6">
+                        <a href="detailpage.html">
+                            <p class="rank-num">6</p>
+                            <i class="bookmark fa-regular fa-star"></i>
+                            <div class="etf-icon">
+                                <div class="icon-imgs">
+                                    <img class="icon-big" src="images/recommend-list-icon-big.png" alt="리스트 큰 아이콘 1">
+                                    <img class="icon-small" src="images/recommend-list-icon-small.png" alt="리스트 작은 아이콘 1">
+                                </div>
+                                <p class="bubble">미국대표지수</p>
+                            </div>
+                            <h4 class="etf-name">KODEX 미국나스닥100</h4>
+                            <p class="etf-ticker">379810</p>
+                            <p class="etf-info">개인연금 | 퇴직연금</p>
+                            <p class="etf-return-sub">*1주 수익률</p>
+                            <p class="etf-return" style="color: #F04452">0.4%</p>
+                            <p class="etf-price">
+                                <span>현재가</span>
+                                <span>24,610원</span>
+                            </p>
+                            <p class="etf-date">
+                                <span>기준일</span>
+                                <span>2026.01.29</span>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="news">
+            <div class="title-line">
+                <h2>ETF 뉴스</h2>
+                <button><a href="news.html">더보기 +</a></button>
+            </div>
+            <div class="swiper-box">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="https://www.newsis.com/view/NISX20260122_0003485737" target="_blank">
+                                <div class="img-wrap">
+                                    <img src="images/news1.jpg" alt="뉴스 썸네일 1">
+                                </div>
+                                <div class="text-wrap">
+                                    <p class="category">MARKET</p>
+                                    <h4 class="news-tit">
+                                        "스페이스X 효과" 우주항공 테마주·ETF '훨훨'
+                                    </h4>
+                                    <p class="news-cont">
+                                        연초부터 우주·항공산업 성장 기대감에 자금이 몰리며 우주항공 관련주와 상장지수펀드(ETF)가 높은 수익률도 날아오르고 있다.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.sedaily.com/article/20000309?ref=naver" target="_blank">
+                                <div class="img-wrap">
+                                    <img src="images/news2.jpg" alt="뉴스 썸네일 2">
+                                </div>
+                                <div class="text-wrap">
+                                    <p class="category">ECONOMY</p>
+                                    <h4 class="news-tit">
+                                        “장기금리 불확실성 커” 리츠·인프라 ETF에 올들어 453억 순유입
+                                    </h4>
+                                    <p class="news-cont">
+                                        글로벌 지정학적 불확실성 등으로 장기금리 변동성이 확대되면서 개인 투자자 자금이 리츠(REITs)·인프라 상장지수펀드(ETF)로 빠르게 이동하고 있다.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.yna.co.kr/view/AKR20260122105500008?input=1195m" target="_blank">
+                                <div class="img-wrap">
+                                    <img src="images/news3.jpg" alt="뉴스 썸네일 3">
+                                </div>
+                                <div class="text-wrap">
+                                    <p class="category">TECH</p>
+                                    <h4 class="news-tit">
+                                        전기차 캐즘에 방전됐던 배터리, 효자 ETF로…로봇엔진으로 재기
+                                    </h4>
+                                    <p class="news-cont">
+                                        한때 부진한 전기차 업황으로 투자자들로부터 외면받았던 배터리주가 로봇산업 수혜를 타고 상장지수펀드(ETF) 시장에서 다시 존재감을 과시하고 있다.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.fnnews.com/news/202601251314522911" target="_blank">
+                                <div class="img-wrap">
+                                    <img src="images/news4.jpg" alt="뉴스 썸네일 4">
+                                </div>
+                                <div class="text-wrap">
+                                    <p class="category">DIVIDEND</p>
+                                    <h4 class="news-tit">
+                                        韓고배당 ETF 순자산 5조 돌파..차별화가 수익률 갈랐다
+                                    </h4>
+                                    <p class="news-cont">
+                                        국내 주식형 고배당 상장지수펀드(ETF) 순자산총액(AUM)이 이달 들어 5조원을 돌파했다. 올해 배당소득 분리과세 시행을 앞두고 투자자 관심이 몰리면서 각 자산운용사들도 수익률 차별화에 심혈을 기울이고 있다.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://economist.co.kr/article/view/ecn202601230047" target="_blank">
+                                <div class="img-wrap">
+                                    <img src="images/news5.png" alt="뉴스 썸네일 5">
+                                </div>
+                                <div class="text-wrap">
+                                    <p class="category">MARKET</p>
+                                    <h4 class="news-tit">
+                                        "KB운용, ‘RISE 대형고배당10TR ETF’ 순자산 2000억 넘었다
+                                    </h4>
+                                    <p class="news-cont">
+                                        ‘RISE 대형고배당10TR ETF’가 순자산 2000억원을 돌파했다고 23일 밝혔다. 펀드평가사 에프앤가이드에 따르면 지난 22일 기준 ‘RISE 대형고배당10TR ETF’의 3개월, 6개월, 1년, 3년 수익률은 각각 49.89%, 102.78%, 155.45%, 241.10%를 기록하고 있다.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.fnnews.com/news/202601260939507177" target="_blank">
+                                <div class="img-wrap">
+                                    <img src="images/news6.png" alt="뉴스 썸네일 6">
+                                </div>
+                                <div class="text-wrap">
+                                    <p class="category">ECONOMY</p>
+                                    <h4 class="news-tit">
+                                        NH-아문디 금채굴 ETF, 순자산 1000억 돌파
+                                    </h4>
+                                    <p class="news-cont">
+                                        NH-아문디자산운용은 ‘HANARO 글로벌금채굴기업 상장지수펀드(ETF)’의 순자산총액이 1000억원을 돌파했다고 26일 밝혔다.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://economist.co.kr/article/view/ecn202601290069" target="_blank">
+                                <div class="img-wrap">
+                                    <img src="images/news7.jpg" alt="뉴스 썸네일 7">
+                                </div>
+                                <div class="text-wrap">
+                                    <p class="category">ECONOMY</p>
+                                    <h4 class="news-tit">
+                                        “금 대신 은” 개인 자금 3500억원…은ETF로 몰렸다
+                                    </h4>
+                                    <p class="news-cont">
+                                        최근 원자재 시장에서 은 가격이 가파르게 오르자 개인투자자들의 자금이 은 상장지수펀드(ETF)로 빠르게 몰리고 있다. 금 가격 상승 흐름이 이어지는 가운데 상대적으로 저평가됐다는 인식과 산업 수요 확대 기대가 겹치며 ‘금보다 은’에 베팅하는 투자자들이 늘어나는 모습이다.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-btns">
+                    <div class="prev"><img src="images/slide-btn.png" alt="슬라이드 버튼"></div>
+                    <div class="next"><img src="images/slide-btn.png" alt="슬라이드 버튼"></div>
+                </div>
+            </div>
+                
+        </section>
+        
+        <section id="info">
+            <div class="info-top">
+                <h2>ETF 투자정보</h2>
+                <p>ETF 비교부터 랭킹, 투자 시뮬레이션까지! ETF 투자를 위한 다양한 정보를 확인해보세요.</p>
+            </div>
+            <div class="info-bot">
+                <ul class="info-list">
+                    <li>
+                        <a href="compare.html">
+                            <div class="left">
+                                <div class="flip">
+                                    <img src="images/info-icon1.png" alt="ETF 비교 랭킹 아이콘">
+                                </div>
+                            </div>
+                            <div class="right">
+                                <h4>ETF 비교·랭킹</h4>
+                                <p>두 가지의 ETF 정보를 한 화면에서 비교해보세요.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="search.html">
+                            <div class="left">
+                                <div class="flip">
+                                    <img src="images/info-icon2.png" alt="투자 시뮬레이션 아이콘">
+                                </div>
+                            </div>
+                            <div class="right">
+                                <h4>ETF 라인업</h4>
+                                <p>지금 시장에는 어떤 ETF가 있을까요?</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="fortune.html">
+                            <div class="left">
+                                <div class="flip">
+                                    <img src="images/info-icon3.png" alt="오늘의 투자 운세 아이콘">
+                                </div>
+                            </div>
+                            <div class="right">
+                                <h4>오늘의 투자 운세</h4>
+                                <p>별자리로 뽑는 투자 운세 보고 가세요!</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="community.html">
+                            <div class="left">
+                                <div class="flip">
+                                    <img src="images/info-icon4.png" alt="ETF 커뮤니티 아이콘">
+                                </div>
+                            </div>
+                            <div class="right">
+                                <h4>ETF 커뮤니티</h4>
+                                <p>ETF 투자자들과 함께 소통해요.</p>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="footer-wrap">
+            <div class="footer-left">
+                <h1 class="logo"><a href="index.html"><img src="images/logo-footer.png" alt="베르트 로고 (화이트)"></a></h1>          
+            </div>
+
+            <div class="footer-right">
+
+                <ul class="footer-menu">
+                    <li>상호명 : 주식회사 베르트</li>
+                    <li>사업자등록번호 : 640-81-01354</li>
+                    <li>대표전화 : 031-902-1777</li>
+                    <li>EMAIL: verte@gmail.com </li>
+                    <li>경기도 고양시 일산동구 중앙로1275번길 38-10</li>
+                    <li>상담시간 : 평일 오전 9:00~오후 5:00</li>
+                    <li>점심시간 : 12:00 - 13:00(토-일요일,공휴일 휴무)</li>
+                </ul>
+                <p class="copyright">Copyright(C) 2025 VERTE MANAGEMENT CO. LTD. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

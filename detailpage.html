@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETF 상세페이지</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/detailpage.css">
+    <link rel="icon" type="image/png" href="images/favi.png">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    
+    <script src="js/common.js" defer></script>
+    <script src="js/detailpage.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/4aff7483c9.js" crossorigin="anonymous"></script>
+
+    <!-- chart 서버데이터 호출 -->
+    <script th:inline="javascript">window.SERVER_TOP5 = /*[[${top5}]]*/ [];</script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+    <!-- PDF -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-wrap">
+            <h1 class="logo"><a href="index.html"><img src="images/logo-header.png" alt="베르트 로고"></a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li>
+                        <a href="#">회사 소개</a>
+                        <ul class="sub">
+                            <li><a href="#">Verte ETF 소개</a></li>
+                            <li><a href="#">경영 정보</a></li>
+                            <li><a href="#">ESG 경영</a></li>
+                            <li><a href="#">인재 채용</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">ETF 정보</a>
+                        <ul class="sub">
+                            <li><a href="compare.html">ETF 비교·랭킹</a></li>
+                            <li><a href="search.html">ETF 라인업</a></li>
+                            <li><a href="#">ETF 트렌드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">MY ETF</a>
+                        <ul class="sub">
+                            <li><a href="personal.html">개인 맞춤형 추천</a></li>
+                            <li><a href="portfolio.html">포트폴리오 제안</a></li>
+                            <li><a href="fortune.html">오늘의 투자 운세</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">투자 정보</a>
+                        <ul class="sub">
+                            <li><a href="#">시장 전망</a></li>
+                            <li><a href="#">ETF 투자 정보</a></li>
+                            <li><a href="#">연금 투자</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="event.html">이벤트</a></li>
+                            <li><a href="community.html">자유게시판</a></li>
+                            <li><a href="news.html">ETF 뉴스</a></li>
+                            <li><a href="#">Q & A</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-btn">
+                <a href="join.html"><button>Join</button></a>
+                <a href="login.html"><button>Login</button></a>
+                <a href="mypage.html"><button>Mypage</button></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="firstInfo">
+        <div class="info-wrap">
+            <ul class="prod-name">
+                <li class="etf-theme">
+                    <button class="cat-btn w-[80px] h-[30px] transition-transform duration-300 btn cursor-default bg-[#ff9f1c] text-[#fff] 
+                                px-8 py-2 text-sm font-light tracking-wide">해외주식</button>
+                    <button class="cat-btn code w-[80px] h-[30px] transition-transform duration-300 btn cursor-default bg-[#00A4B7] text-[#fff] 
+                                px-8 py-2 text-sm font-light tracking-wide">0035T0</button>
+                </li>
+                <li class="etf-name">
+                    <p class="etf-Tit">PLUS 글로벌<br> 휴머노이드로봇액티브</p>
+                    <button class="cat-btn w-[200px] h-[40px] hover:scale-105 transition-transform duration-300
+                                btn cursor-pointer bg-[#00A4B7] text-[#fff]
+                                px-0 py-6 text-[14px] font-light tracking-wide" onclick="location.href='simulation.html'">
+                            투자 시뮬레이션 하러 가기
+                    </button>
+                </li>
+                <li class="range-wrap profit border-gray-300 pt-6 cursor-pointer">
+                        <p class="text-m font-normal mb-4">위험등급</p>
+                        <div class="px-2">
+                            <input type="range" id="profitRange" min="0" max="100" value="80" step="1"
+                                class="w-full h-3 bg-gray-200 rounded-lg appearance-none accent-[#F04452] border-0  pointer-events-none">
+                            <div class="flex justify-between text-[11px] text-gray-400 mt-3">
+                                <span>6등급</span><span>5등급</span><span>4등급</span><span>3등급</span><span>2등급</span>
+                                <span>1등급</span>
+                            </div>
+                        </div>
+                </li>
+            </ul>
+            <ul class="etf-info">
+                <li>
+                    <ul class="first-line">
+                        <li class="present-price cont-back">
+                            <div class="price-tit">
+                                <p class="bg-tit2">현재가</p>
+                            </div>
+                            <div class="updown-wrap">
+                                <i class="fa-solid fa-sort-down"></i>
+                                <p class="updown">- 200 <span>(- 0.55%)</span></p>
+                            </div>
+                            <p class="real-price">123,456 <span class="won">원</span></p>
+                        </li>
+                        <li class="standard-price cont-back">
+                            <div class="nav-tit">
+                                <p class="bg-tit">기준가(NAV)</p>
+                            </div>
+                            <div class="updown-wrap">
+                                <i class="fa-solid fa-sort-down"></i>
+                                <p class="updown text-deco">- 300 <span> (- 0.55%)</span></p>
+                            </div>
+                            <p class="real-price">100,456 <span class="won">원</span></p>
+                        </li>
+                    </ul>
+                    <ul class="second-line">
+                        <li class="profit-price cont-back">
+                            <div class="profit-tit">
+                                <p class="bg-tit">수익률</p>
+                            </div>
+                            <p class="month">(1개월 수익률)</p>
+                            <p class="percentage">50%</p>
+                        </li>
+                        <li class="trade-quantity cont-back">
+                            <div class="trade-tit">
+                                <p class="bg-tit2">거래량</p>
+                            </div>
+                            <p class="quantity">177,865주</p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="tracking-time">26.01.15 14:34:53(장중)</li>
+            </ul>
+        </div>
+    </section>
+    <section class="tab-info"> 
+        <div class="tit-wrap">
+            <div class="prodtxt">한화자산운용</div>
+            <div class="prodTit">PLUS 글로벌휴머노이드로봇액티브</div>
+        </div>
+        <ul class="tab-category">
+            <li class="tab-btn on" data-tab="standard-info">기본정보</li>
+            <li class="tab-btn" data-tab="profit">수익률</li>
+            <li class="tab-btn" data-tab="container">구성정보</li>
+        </ul>
+
+            <div class="tab-panels">
+                <div id="standard-info" class="tab-cont on">
+                    <form>
+                        <table class="cont-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="table-head">항목</th>
+                                    <th class="table-head">내용</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table-row">
+                                    <td class="check-icon"><i class="fa-solid fa-check"></i></td>
+                                    <td class="cont1">기초자산</td>
+                                    <td class="cont2">주식</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="check-icon"><i class="fa-solid fa-check"></i></td>
+                                    <td class="cont1">기초지수</td>
+                                    <td class="cont2">iSelect Global Humanoid Robot Index</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="check-icon"><i class="fa-solid fa-check"></i></td>
+                                    <td class="cont1">시가총액</td>
+                                    <td class="cont2">722억원 (43위)</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="check-icon"><i class="fa-solid fa-check"></i></td>
+                                    <td class="cont1">순자산(AUM)</td>
+                                    <td class="cont2">700억원 (43위)</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="check-icon"><i class="fa-solid fa-check"></i></td>
+                                    <td class="cont1">상장주식수</td>
+                                    <td class="cont2">3,700,000주</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="check-icon"><i class="fa-solid fa-check"></i></td>
+                                    <td class="cont1">구성종목수</td>
+                                    <td class="cont2">30종목</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="check-icon"><i class="fa-solid fa-check"></i></td>
+                                    <td class="cont1">레버리지</td>
+                                    <td class="cont2">1배</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+                <div id="profit" class="tab-cont">
+                    <div class="profit-chartbg">
+                        <canvas id="profit-chart"></canvas>
+                    </div>
+                    <div class="profit-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="first-cell"></th>
+                                    <th>2020</th>
+                                    <th>2021</th>
+                                    <th>2022</th>
+                                    <th>2023</th>
+                                    <th>2024</th>
+                                    <th>2025</th>
+                                    <th>2026</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="property-tit">기준가(NAV)</td>
+                                    <td>1.41</td>
+                                    <td>1.42</td>
+                                    <td>8.01</td>
+                                    <td>18.15</td>
+                                    <td>20.29</td>
+                                    <td>169.54</td>
+                                    <td>170.5</td>
+                                </tr>
+                                <tr>
+                                    <td class="property-tit">시장가(종가)</td>
+                                    <td>1.41</td>
+                                    <td>1.42</td>
+                                    <td>8.01</td>
+                                    <td>18.15</td>
+                                    <td>20.29</td>
+                                    <td>169.54</td>
+                                    <td>170.5</td>
+                                </tr>
+                                <tr>
+                                    <td class="property-tit">기초지수</td>
+                                    <td>1.41</td>
+                                    <td>1.42</td>
+                                    <td>8.01</td>
+                                    <td>18.15</td>
+                                    <td>20.29</td>
+                                    <td>169.54</td>
+                                    <td>170.5</td>
+                                </tr>
+                                </tbody>
+                            <caption>
+                                <div class="caution">
+                                    <p>※확인해주세요</p>
+                                    <p>· 수익률 표는 투자분배금 재투자를 가정한 세전 수익률 기준입니다</p>
+                                    <p>· 기초지수는 나스닥 지수 입니다.</p>
+                                </div>
+                            </caption>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="container" class="tab-cont">
+                    <div class="setup-header">
+                        <div class="chart-caption">
+                            ETF 구성정보 <span class="top5-text">TOP5</span>
+                        </div>
+                        <div class="actions"><button type="button" class="cat-btn1" onclick="downloadPDF()">전체구성 PDF 다운 ></button></div>
+                    </div>
+                    <div id="setup"  class="chart-container-custom">
+                        <div class="chart-center-area grid">
+                            <div class="chart-box">
+                                <canvas id="top-chart"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart-right-list">
+                            <h3>TOP5 구성 비중</h3>
+                            <ul id="top5-list">
+                                <li>
+                                    <span class="name">TESLA INC</span>
+                                    <span class="weight">40%</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="chart-caption2 foot">
+                        <span th:text="${#temporals.format(T(java.time.LocalDate).now(), 'yyyy년 M월')}"></span>
+                        기준 : 가상데이터
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <footer>
+        <div class="footer-wrap">
+            <div class="footer-left">
+                <h1 class="logo"><a href="index.html"><img src="images/logo-footer.png" alt="베르트 로고 (화이트)"></a></h1>          
+            </div>
+
+            <div class="footer-right">
+
+                <ul class="footer-menu">
+                    <li>상호명 : 주식회사 베르트</li>
+                    <li>사업자등록번호 : 640-81-01354</li>
+                    <li>대표전화 : 031-902-1777</li>
+                    <li>EMAIL: verte@gmail.com </li>
+                    <li>경기도 고양시 일산동구 중앙로1275번길 38-10</li>
+                    <li>상담시간 : 평일 오전 9:00~오후 5:00</li>
+                    <li>점심시간 : 12:00 - 13:00(토-일요일,공휴일 휴무)</li>
+                </ul>
+                <p class="copyright">Copyright(C) 2025 VERTE MANAGEMENT CO. LTD. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

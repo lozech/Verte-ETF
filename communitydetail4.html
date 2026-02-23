@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자유게시판</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/communitydetail.css">
+    <link rel="icon" type="image/png" href="images/favi.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/common.js" defer></script>
+    <script src="js/communitydetail.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/4aff7483c9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header-wrap">
+            <h1 class="logo"><a href="index.html"><img src="images/logo-header.png" alt="베르트 로고"></a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li>
+                        <a href="#">회사 소개</a>
+                        <ul class="sub">
+                            <li><a href="#">Verte ETF 소개</a></li>
+                            <li><a href="#">경영 정보</a></li>
+                            <li><a href="#">ESG 경영</a></li>
+                            <li><a href="#">인재 채용</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">ETF 정보</a>
+                        <ul class="sub">
+                            <li><a href="compare.html">ETF 비교·랭킹</a></li>
+                            <li><a href="search.html">ETF 라인업</a></li>
+                            <li><a href="#">ETF 트렌드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">MY ETF</a>
+                        <ul class="sub">
+                            <li><a href="personal.html">개인 맞춤형 추천</a></li>
+                            <li><a href="portfolio.html">포트폴리오 제안</a></li>
+                            <li><a href="fortune.html">오늘의 투자 운세</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">투자 정보</a>
+                        <ul class="sub">
+                            <li><a href="#">시장 전망</a></li>
+                            <li><a href="#">ETF 투자 정보</a></li>
+                            <li><a href="#">연금 투자</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="event.html">이벤트</a></li>
+                            <li><a href="community.html">자유게시판</a></li>
+                            <li><a href="news.html">ETF 뉴스</a></li>
+                            <li><a href="#">Q & A</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-btn">
+                <a href="join.html"><button>Join</button></a>
+                <a href="login.html"><button>Login</button></a>
+                <a href="mypage.html"><button>Mypage</button></a>
+            </div>
+        </div>
+    </header>
+    <section class="tab-location">
+        <div class="tabs">
+            <p>커뮤니티<span>></span></p>
+            <p>자유게시판<span>></span></p>
+            <p class="selection">게시글상세보기</p>
+        </div>
+        <h2>자유게시판</h2>
+        <div class="flex justify-end postBtnBg">
+            <button class="btn btn-outline border border-[#1d7a5548] text-[#1A1A1A] hover:bg-[#1D7A55] 
+            hover:border-[#1D7A55] hover:text-white px-8 py-3 text-xl font-medium tracking-wide postBtn">게시글 작성</button>
+        </div>
+    </section>
+    <section class="freeboardDetail">
+        <div class="content-free">
+            <div class="freeboardTitle">
+                <ul class="titLine">
+                    <li class="tit">금일 KOSPI200지수가 플러스(+)임에도 레버리지 ETF 성과가 마이너스(-)인 이유는 무엇인가요?</li>
+                    <li class="likeicons">
+                        <ul class="likeiconsBg">
+                            <li class="like">
+                                <i class="fa-regular fa-heart emptyHeart"></i>
+                                <i class="fa-solid fa-heart unemptyHeart"></i>
+                            </li>
+                            <li class="bookmark">
+                                <i class="fa-regular fa-bookmark emptyBookmark"></i>
+                                <i class="fa-solid fa-bookmark unemptyBookmark"></i>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="freeboardContent">
+                <ul class="userInfo">
+                    <li class="nickname"><b>작성자 : </b> <span>Buruayo</span></li>
+                    <li class="enterdate"><b>작성일자 : </b> <span>2025-04-15</span></li>
+                </ul>
+                <br><p>안녕하세요</p><br>
+                <p>금일 시장이 상승하였음에도 불구하고, 레버리지 ETF가 하락하는 이유는 일반적이지 않지만, 현물 주식은 상승하는 가운데, 해당</p>
+                <p>폭보다 더 크게 선물이 하락하는 경우 일시적으로 지수가 상승하고 있는 중에 레버리지 ETF 가 (-) 성과를 보일 수도 있습니다.</p><br>
+                <p>또한 전일 장 종료 과정에서 오후 3시 30분에 ETF 가 종가를 형성한 이후에 오후 3시 45분까지 거래를 지속하는 선물가격이 크게</p>
+                <p>하락하는 경우, 실제 ETF 가치 역시 하락하였음에도 종가 이후 가격이 변하지 않은 경우, 다음날인 금일 지수가 보합 혹은 소폭
+                    상승하더라도 ETF 가 (-) 성과를 보일 수도 있습니다.</p>
+                <p>일부 펀드는 매월, 분기별, 반기별, 혹은 연간 단위로 분배금을 지급하는 규칙적인 구조를 가지고 있습니다.
+                지급 시점에는 운용 수익의 일정 비율을 투자자분들께 나누어주어 안정적인 수익 체감을 돕습니다.</p>
+                <div class="contentimage"><img src="images/image 36.png" alt=""></div>
+            </div>
+            
+        </div>
+        <div class="commentDetail">
+            <!-- <h2 class="commenttit">댓글창</h2> -->
+            <div class="list-wrap">
+                <div class="commentList">
+                        <ul class="commentListBg1">
+                            <li class="head">
+                                <ul class="headline">
+                                    <li class="commentName">주고수</li>
+                                    <li class="postDate">@3일전</li>
+                                </ul>
+                            </li>
+                            <li class="commentCont">어제 22프로때 안 팔고
+                                술 먹고 왔더니 쭈욱 내려가고
+                                음주때 흐려진 판단력으로
+                                아이온큐 팔아서 샌디 레버를 진입함
+                                더 떨어져서 샌디 본주를 팔고
+                            </li>
+                        </ul>
+                        <ul class="commentListBg1">
+                            <li class="head">
+                                <ul class="headline">
+                                    <li class="commentName">펀핑프</li>
+                                    <li class="postDate">@5일전</li>
+                                </ul>
+                            </li>
+                            <li class="commentCont">
+                                주가가 벨류에이션상 너무 높거나 고평가라면 폭락하는게 정당화되고 스캠이라고 볼 수 있지만 
+                                아래 실적발표 및 가이던스를 숫자로 증명한 순간 의심은 거두어야한다고 봄
+                            </li>
+                        </ul>
+                        <ul class="commentListBg1">
+                            <li class="head">
+                                <ul class="headline">
+                                    <li class="commentName">firfun</li>
+                                    <li class="postDate">@7일전</li>
+                                </ul>
+                            </li>
+                            <li class="commentCont">
+                                다들 실적발표 전까진 관심 없다가
+                                실적이 초대박대서 배아프신분들이 계신듯 ㅋㅋ
+                            </li>
+                        </ul>
+                        <ul class="commentListBg1">
+                            <li class="head">
+                                <ul class="headline">
+                                    <li class="commentName">firfun</li>
+                                    <li class="postDate">@7일전</li>
+                                </ul>
+                            </li>
+                            <li class="commentCont">
+                                다들 실적발표 전까진 관심 없다가
+                                실적이 초대박대서 배아프신분들이 계신듯 ㅋㅋ
+                            </li>
+                        </ul>
+                        <ul class="commentListBg1">
+                            <li class="head">
+                                <ul class="headline">
+                                    <li class="commentName">firfun</li>
+                                    <li class="postDate">@7일전</li>
+                                </ul>
+                            </li>
+                            <li class="commentCont">
+                                다들 실적발표 전까진 관심 없다가
+                                실적이 초대박대서 배아프신분들이 계신듯 ㅋㅋ
+                            </li>
+                        </ul>
+                        <ul class="commentListBg1">
+                            <li class="head">
+                                <ul class="headline">
+                                    <li class="commentName">firfun</li>
+                                    <li class="postDate">@7일전</li>
+                                </ul>
+                            </li>
+                            <li class="commentCont">
+                                다들 실적발표 전까진 관심 없다가
+                                실적이 초대박대서 배아프신분들이 계신듯 ㅋㅋ
+                            </li>
+                        </ul>
+                </div>
+            </div>
+            <ul class="comment">
+                <li class="head">
+                            <ul class="headline">
+                                <li class="commentName">maiapa21</li>
+                                <li class="postBtn">
+                                    <div class="flex justify-end postBtnBg">
+                                        <button class="btn text-[#1A1A1A] hover:bg-[#fff] bg-[#1d7a55b6] 
+                                        text-white hover:text-[#1A1A1A] 
+                                        px-8 py-3 text-xm font-regular tracking-wide postBtn">POST</button>
+                                    </div>
+                                </li>
+                            </ul>
+                </li>
+                <li class="commentEnter">
+                    <ul class="commentEnterBg">
+                        <li class="commentEnterCont">
+                            <textarea name="comment" id="commentent" placeholder="댓글을 자유롭게 작성해주세요"></textarea>
+                        </li>
+                    </ul>
+                </li>
+            </ul>   
+        </div>
+    </section>
+    <div class="flex justify-center mBtnBg">
+            <button type="button" class="mbtn btn btn-outline border border-[#1d7a5548] text-[#1A1A1A] 
+            hover:bg-[#1D7A55] hover:border-[#1D7A55] hover:text-white px-8 py-3 text-xm
+            font-medium tracking-wide">목록보기</button>
+    </div>
+
+    <form class="freeboardList">
+        <table>
+            <caption>
+                <h2>최근게시글</h2>
+            </caption>
+            <thead>
+                <th class="title1">제목</th>
+                <th class="loadnum1">조회수</th>
+                <th class="like1">좋아요</th>
+                <th class="enterdate">등록일</th>
+            </thead>
+            <tbody>
+                <tr onclick="location.href='communitydetail.html'">
+                    <td class="realtit">
+                        월배당 상품의 분배금 지급 기준일, 분배락일, 지급 예정일을 알고 싶어요.</td>
+                    <td class="loadnum">547</td>
+                    <td class="like">681</td>
+                    <td class="realdate">2025-05-26</td>
+                </tr>
+                <tr onclick="location.href='communitydetail2.html'">
+                    <td class="realtit">
+                        국내 상장 ETF와 해외(역외) 상장 ETF와의 차이가 무엇인가요?
+                    </td>
+                    <td class="loadnum">281</td>
+                    <td class="like">391</td>
+                    <td class="realdate">2025-05-23</td>
+                </tr>
+                <tr onclick="location.href='communitydetail3.html'">
+                    <td class="realtit">
+                        금일 레버리지 ETF의 수익률이 왜 시장 수익률의 2배와 차이가 나나요?
+                    </td>
+                    <td class="loadnum">3282</td>
+                    <td class="like">401</td>
+                    <td class="realdate">2025-05-19</td>
+                </tr>
+                <tr onclick="location.href='communitydetail4.html'">
+                    <td class="realtit">
+                        금일 KOSPI200지수가 플러스(+)임에도 레버리지 ETF 성과가 마이너스(-)인 이유는 무엇인가요?
+                    </td>
+                    <td class="loadnum">25</td>
+                    <td class="like">14</td>
+                    <td class="realdate">2025-04-15</td>
+                </tr>
+                <tr onclick="location.href='communitydetail5.html'">
+                    <td class="realtit">
+                        금일 인버스 ETF의 수익률이 왜 시장 수익률의 -1배와 차이가 나나요?
+                    </td>
+                    <td class="loadnum">41</td>
+                    <td class="like">20</td>
+                    <td class="realdate">2025-03-22</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <footer>
+        <div class="footer-wrap">
+            <div class="footer-left">
+                <h1 class="logo"><a href="index.html"><img src="images/logo-footer.png" alt="베르트 로고 (화이트)"></a></h1>          
+            </div>
+
+            <div class="footer-right">
+
+                <ul class="footer-menu">
+                    <li>상호명 : 주식회사 베르트</li>
+                    <li>사업자등록번호 : 640-81-01354</li>
+                    <li>대표전화 : 031-902-1777</li>
+                    <li>EMAIL: verte@gmail.com </li>
+                    <li>경기도 고양시 일산동구 중앙로1275번길 38-10</li>
+                    <li>상담시간 : 평일 오전 9:00~오후 5:00</li>
+                    <li>점심시간 : 12:00 - 13:00(토-일요일,공휴일 휴무)</li>
+                </ul>
+                <p class="copyright">Copyright(C) 2025 VERTE MANAGEMENT CO. LTD. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

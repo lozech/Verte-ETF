@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>투자 시뮬레이션</title>
+
+    <link rel="icon" href="images/favi.png" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/simulation.css" />
+
+</head>
+<body>
+    <header>
+        <div class="header-wrap">
+            <h1 class="logo"><a href="index.html"><img src="images/logo-header.png" alt="베르트 로고"></a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li>
+                        <a href="#">회사 소개</a>
+                        <ul class="sub">
+                            <li><a href="#">Verte ETF 소개</a></li>
+                            <li><a href="#">경영 정보</a></li>
+                            <li><a href="#">ESG 경영</a></li>
+                            <li><a href="#">인재 채용</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">ETF 정보</a>
+                        <ul class="sub">
+                            <li><a href="compare.html">ETF 비교·랭킹</a></li>
+                            <li><a href="search.html">ETF 라인업</a></li>
+                            <li><a href="#">ETF 트렌드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">MY ETF</a>
+                        <ul class="sub">
+                            <li><a href="personal.html">개인 맞춤형 추천</a></li>
+                            <li><a href="portfolio.html">포트폴리오 제안</a></li>
+                            <li><a href="fortune.html">오늘의 투자 운세</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">투자 정보</a>
+                        <ul class="sub">
+                            <li><a href="#">시장 전망</a></li>
+                            <li><a href="#">ETF 투자 정보</a></li>
+                            <li><a href="#">연금 투자</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="event.html">이벤트</a></li>
+                            <li><a href="community.html">자유게시판</a></li>
+                            <li><a href="news.html">ETF 뉴스</a></li>
+                            <li><a href="#">Q & A</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-btn">
+                <a href="join.html"><button>Join</button></a>
+                <a href="login.html"><button>Login</button></a>
+                <a href="mypage.html"><button>Mypage</button></a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="section1">
+            <div class="inner">
+                <div class="title-area">
+                    <h1>ETF 투자 시뮬레이션</h1>
+                    <p class="sub">
+                        실제 투자 전, ETF 운용을 미리 경험해보세요
+                    </p>
+                </div>
+
+                <div class="product-area">
+                    <div class="product-badge">
+                        <span class="label">상품명</span>
+                        <strong class="name">TIGER 미국 S&P</strong>
+                    </div>
+                    <p class="desc">
+                        기간·금액을 입력하면 아래에서 결과 요약과 차트를 확인할 수 있어요.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ----- section2 : 투자 설정 ----- -->
+        <div class="section2">
+            <div class="inner">
+                <div class="panel">
+                    <div class="panel-head">
+                        <h2>투자설정</h2>
+                        <p>월 투자금액과 기간을 입력하고 시뮬레이션을 실행하세요.</p>
+                    </div>
+
+                    <form id="simForm" class="form-grid">
+                        <div class="inputWrap">
+                            <div class="field">
+                                <p class="atit">월 투자금액</p>
+                                <div class="input-wrap">
+                                    <input
+                                        type="text"
+                                        id="monthlyAmount"
+                                        name="monthlyAmount"
+                                        inputmode="numeric"
+                                        placeholder="예) 300000"
+                                        autocomplete="off"
+                                    />
+                                    <span class="unit">원</span>
+                                </div>
+                                <p class="hint" id="amountHint">숫자만 입력해 주세요.</p>
+                            </div>
+
+                            <div class="field">
+                                <p class="atit">투자 시작일</p>
+                                <input
+                                    type="date"
+                                    id="startDate"
+                                    name="startDate"
+                                />
+                                <p class="hint" id="startHint">시작일을 선택해 주세요.</p>
+                            </div>
+
+                            <div class="field">
+                                <p class="atit">투자 종료일</p>
+                                <input
+                                    type="date"
+                                    id="endDate"
+                                    name="endDate"
+                                />
+                                <p class="hint" id="endHint">종료일을 선택해 주세요.</p>
+                            </div>
+                        </div>
+
+                        <div class="actions">
+                            <button type="submit" id="runBtn" class="btn-primary">
+                                시뮬레이션 시작하기
+                            </button>
+                            <button type="button" id="resetBtn" class="btn-ghost">
+                                입력 초기화
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="dev-note">
+                        <p>
+                            <strong>주의:</strong>
+                            해당 시뮬레이션은 예시로 실제투자 결과와 다를 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ----section3 : 결과 ------>
+        <div class="section3 is-hidden" id="resultSection">
+            <div class="inner">
+                <div class="result-head">
+                    <div class="left">
+                        <h2>시뮬레이션 결과</h2>
+                        <div class="result-line" id="resultLine">
+                            <p class="mini">시뮬레이션 한줄요약</p>
+                            <p class="mmm">가격이 내려가도 꾸준히 투자하면 결과가 나올 수 있어요</p>
+                        </div>
+                    </div>
+
+                    <button type="button" id="openRiskBtn" class="btn-outline">
+                        투자 주의사항
+                    </button>
+                </div>
+
+                <div class="summary-strip">
+                    <div class="summary-item">
+                        <span class="k">투자기간</span>
+                        <strong class="v" id="sumPeriod">-</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span class="k">총 투자금</span>
+                        <strong class="v" id="sumInvested">-</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span class="k">총 금액</span>
+                        <strong class="v" id="sumTotal">-</strong>
+                    </div>
+                </div>
+
+                <div class="metric-cards">
+                    <div class="metric-card">
+                        <p class="t">총 투자금</p>
+                        <strong class="n" id="metricInvested">-</strong>
+                        <p class="s">월 납입 누적 금액</p>
+                    </div>
+                    <div class="metric-card">
+                        <p class="t">최종 평가금액</p>
+                        <strong class="n" id="metricFinal">-</strong>
+                        <p class="s">기간 종료 시점 평가</p>
+                    </div>
+                    <div class="metric-card">
+                        <p class="t">수익률</p>
+                        <strong class="n" id="metricRate">-</strong>
+                        <p class="s">백엔드 계산값</p>
+                    </div>
+                </div>
+
+                <div class="chart-panel">
+                    <div class="tab-wrap">
+                        <ul class="tab-btn">
+                            <li class="active"><a href="#" data-tab="tab1">누적평가금액</a></li>
+                            <li><a href="#" data-tab="tab2">월별매수수량</a></li>
+                            <li><a href="#" data-tab="tab3">평균단가</a></li>
+                        </ul>
+
+                        <ul class="tab-view">
+                            <li class="active" id="tab1">
+                                <div class="chart-placeholder" id="chart1">
+                                    <span>차트 1 영역 (누적평가금액)</span>
+                                </div>
+                            </li>
+
+                            <li id="tab2">
+                                <div class="chart-placeholder" id="chart2">
+                                    <span>차트 2 영역 (월별매수수량)</span>
+                                </div>
+                            </li>
+
+                            <li id="tab3">
+                                <div class="chart-placeholder" id="chart3">
+                                    <span>차트 3 영역 (평균단가)</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---- 모달 ------>
+        <div id="riskModal" class="modal is-hidden" aria-hidden="true">
+            <div class="modal-dim" data-close="true"></div>
+
+            <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="riskTitle">
+                <div class="modal-head">
+                    <h3 id="riskTitle">투자 주의사항</h3>
+                    <button type="button" class="modal-close" aria-label="닫기" data-close="true">×</button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="risk-content" id="riskContent">
+                        <p class="risk-title">전체 주의사항</p>
+                        <ul class="risk-list">
+                            <li>ETF는 원금 손실이 발생할 수 있어요.</li>
+                            <li>시장 변동, 환율(해외자산), 금리 등에 따라 성과가 달라질 수 있어요.</li>
+                            <li>과거 수익률이 미래 수익률을 보장하지 않아요.</li>
+                            <li>거래량/스프레드에 따라 체결 가격이 달라질 수 있어요.</li>
+                        </ul>
+                        <p class="risk-note">
+                            ※ 해당주의사항은 참고이며 절대적인 자료가아닙니다.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="modal-foot">
+                    <button type="button" class="btn-primary wide" data-close="true">
+                        닫기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-wrap">
+            <div class="footer-left">
+                <h1 class="logo"><a href="index.html"><img src="images/logo-footer.png" alt="베르트 로고 (화이트)"></a></h1>          
+            </div>
+
+            <div class="footer-right">
+
+                <ul class="footer-menu">
+                    <li>상호명 : 주식회사 베르트</li>
+                    <li>사업자등록번호 : 640-81-01354</li>
+                    <li>대표전화 : 031-902-1777</li>
+                    <li>EMAIL: verte@gmail.com </li>
+                    <li>경기도 고양시 일산동구 중앙로1275번길 38-10</li>
+                    <li>상담시간 : 평일 오전 9:00~오후 5:00</li>
+                    <li>점심시간 : 12:00 - 13:00(토-일요일,공휴일 휴무)</li>
+                </ul>
+                <p class="copyright">Copyright(C) 2025 VERTE MANAGEMENT CO. LTD. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/common.js"></script>
+    <script src="./js/simulation.js"></script>
+</body>
+</html>

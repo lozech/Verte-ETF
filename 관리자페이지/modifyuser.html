@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN 회원 정보 수정</title>
+    <link rel="stylesheet" href="css/modifyuser.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="icon" type="image/png" href="images/favi.png">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/common.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/4aff7483c9.js" crossorigin="anonymous"></script>
+    <script src="js/modifyuser.js" defer></script>
+</head>
+<body>
+<section class="adminpage">
+    <div class="adminpage-wrap">
+        <div class="side-menu">
+            <div class="logo"><a href="index.html"><img src="images/logo-footer.png" alt="베르트 로고"></a></div>
+
+            <ul class="menu-list">
+                <li class="adminControl"><a href="admin.html">HOME</a></li>
+                <li class="userControl"><a href="adminuser.html">회원관리</a></li>
+                <li class="priceControl"><a href="adminPrice.html">ETF 시세관리</a></li>
+                <li class="productControl"><a href="adminProduct.html">ETF 종목 정보(Meta) 관리</a></li>
+                <li class="eventControl"><a href="adminEvent.html">이벤트 관리</a></li>
+            </ul>
+        </div>
+        <form class="addForm">
+            <div role="tablist" class="tabs tabs-border justify-start w-full mt-[20px] mb-[-140px]">
+                <a href="adminuser.html" role="tab" class="tab mx-4 noticepage text-[18px] text-gray-500">회원관리 </a>
+                <a href="#" role="tab" class="tab mx-4 noticepage text-[18px] text-gray-500">></a>
+                <a href="modifyuser.html" role="tab" class="tab mx-4 freepage text-[18px] text-gray-500 font-bold">회원 정보 수정</a>
+            </div>
+            <fieldset>
+                <legend><span>회원 정보 수정</span></legend>
+                <table id="userTbody">
+                    <tr class="nickname1-bg">
+                        <td class="td-col">
+                            아이디(닉네임)
+                            <input type="text" name="nickname">
+                        </td>
+                    </tr>
+                    <tr class="mailinfo">
+                        <td class="td-col">
+                            이메일
+                            <input type="text" name="email" placeholder="example@gmail.com">
+                        </td>
+                    </tr>
+                    <tr class="usertype">
+                        <td class="td-col">
+                            회원유형
+                            <label class="select border-none px-30 w-30">
+                                <select name="user" class="select select-bordered px-5">
+                                    <option value="회원">회원</option>
+                                    <option value="admin">admin</option>
+                                </select>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr class="dangertype">
+                        <td class="td-col">
+                            투자성향
+                            <input type="file" name="favorite" class="file-input">
+                        </td>
+                    </tr>
+                    <tr class="joindate">
+                        <td class="td-col">
+                            가입날짜
+                            <input type="date" name="joinDate">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="flex justify-center items-center gap-[20px]">
+                            <button type="button" class="s-btn w-[200px] h-[48px] bg-[#467261] text-white rounded-md text-[15px] font-medium transition hover:bg-[#365a4c] mt-[50px] mb-[50px]">
+                            저장하기
+                            </button>
+                            <button type="button" class="c-btn w-[200px] h-[48px] border-2 border-[#467261] rounded-md text-[15px] font-medium transition hover:bg-[#467261] hover:text-white mt-[50px] mb-[50px]">
+                            취소
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+</section>
+</body>
+</html>

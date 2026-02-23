@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <link rel="icon" href="images/favi.png" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-wrap">
+            <h1 class="logo"><a href="index.html"><img src="images/logo-header.png" alt="베르트 로고"></a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li>
+                        <a href="#">회사 소개</a>
+                        <ul class="sub">
+                            <li><a href="#">Verte ETF 소개</a></li>
+                            <li><a href="#">경영 정보</a></li>
+                            <li><a href="#">ESG 경영</a></li>
+                            <li><a href="#">인재 채용</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">ETF 정보</a>
+                        <ul class="sub">
+                            <li><a href="compare.html">ETF 비교·랭킹</a></li>
+                            <li><a href="search.html">ETF 라인업</a></li>
+                            <li><a href="#">ETF 트렌드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">MY ETF</a>
+                        <ul class="sub">
+                            <li><a href="personal.html">개인 맞춤형 추천</a></li>
+                            <li><a href="portfolio.html">포트폴리오 제안</a></li>
+                            <li><a href="fortune.html">오늘의 투자 운세</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">투자 정보</a>
+                        <ul class="sub">
+                            <li><a href="#">시장 전망</a></li>
+                            <li><a href="#">ETF 투자 정보</a></li>
+                            <li><a href="#">연금 투자</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="event.html">이벤트</a></li>
+                            <li><a href="community.html">자유게시판</a></li>
+                            <li><a href="news.html">ETF 뉴스</a></li>
+                            <li><a href="#">Q & A</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-btn">
+                <a href="join.html"><button>Join</button></a>
+                <a href="login.html"><button>Login</button></a>
+                <a href="mypage.html"><button>Mypage</button></a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="login-container">
+            <h2>로그인</h2>
+            <p>
+                당신의 첫걸음부터 함께합니다.<br />
+                로그인하시면 더 자세한 안내를 받으실수있습니다.
+            </p>
+
+            <div class="login-box">
+                <p>아이디</p>
+                <input
+                    type="text"
+                    placeholder="example@gmail.com"
+                    class="input"
+                />
+                <p>비밀번호</p>
+                <input
+                    type="password"
+                    placeholder="비밀번호를 입력하세요."
+                    class="input"
+                />
+
+                <button  class="w-[430px] h-[48px] bg-[#055C4D] text-white rounded-md text-[15px] font-medium transition hover:bg-[#055C4D69]">
+                    로그인
+                </button>
+                <div class="link-area">
+                    <a href="join.html">회원가입</a>　|　<a href="#">아이디 찾기</a>
+                    　|　<a href="#">비밀번호 찾기</a>
+                </div>
+
+                <div class="social-title">간편 로그인</div>
+                <div class="flex flex-col gap-3 w-full max-w-md mx-auto">
+                    <button class="relative h-[48px] ring-1 ring-gray-300 rounded-md bg-white text-sm font-medium text-gray-900 transition hover:bg-gray-50">
+                        <img src="images/kakao.png" alt="카카오" class="absolute left-36 top-1/2 -translate-y-1/2 h-5"/>
+                        <span class="block w-full text-center">카카오톡 로그인</span>
+                    </button>
+
+                    <button class="relative h-[48px] ring-1 ring-gray-300 rounded-md bg-white text-sm font-medium text-gray-900 transition hover:bg-gray-50">
+                        <img src="images/google.png" alt="구글" class="absolute left-36 top-1/2 -translate-y-1/2 h-5"/>
+                        <span class="block w-full text-center">구글 로그인</span>
+                    </button>
+
+                    <button class="relative h-[48px] ring-1 ring-gray-300 rounded-md bg-white text-sm font-medium text-gray-900 transition hover:bg-gray-50">
+                        <img src="images/naver.png" alt="네이버" class="absolute left-36 top-1/2 -translate-y-1/2 h-5" />
+                        <span class="block w-full text-center">네이버 로그인 </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-wrap">
+            <div class="footer-left">
+                <h1 class="logo"><a href="index.html"><img src="images/logo-footer.png" alt="베르트 로고 (화이트)"></a></h1>          
+            </div>
+
+            <div class="footer-right">
+
+                <ul class="footer-menu">
+                    <li>상호명 : 주식회사 베르트</li>
+                    <li>사업자등록번호 : 640-81-01354</li>
+                    <li>대표전화 : 031-902-1777</li>
+                    <li>EMAIL: verte@gmail.com </li>
+                    <li>경기도 고양시 일산동구 중앙로1275번길 38-10</li>
+                    <li>상담시간 : 평일 오전 9:00~오후 5:00</li>
+                    <li>점심시간 : 12:00 - 13:00(토-일요일,공휴일 휴무)</li>
+                </ul>
+                <p class="copyright">Copyright(C) 2025 VERTE MANAGEMENT CO. LTD. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/common.js"></script>
+</body>
+</html>

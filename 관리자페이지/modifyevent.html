@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN 이벤트 수정</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/modifyevent.css">
+    <link rel="icon" type="image/png" href="images/favi.png">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/common.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/4aff7483c9.js" crossorigin="anonymous"></script>
+    <script src="js/modifyevent.js" defer></script>
+</head>
+<body>
+    <section class="adminpage">
+        <div class="adminpage-wrap">
+            <div class="side-menu">
+                <div class="logo"><a href="index.html"><img src="images/logo-footer.png" alt="베르트 로고"></a></div>
+
+                <ul class="menu-list">
+                        <li class="adminControl"><a href="admin.html">HOME</a></li>
+                        <li class="userControl"><a href="adminuser.html">회원관리</a></li>
+                        <li class="priceControl"><a href="adminPrice.html">ETF 시세관리</a></li>
+                        <li class="productControl"><a href="adminProduct.html">ETF 종목 정보(Meta) 관리</a></li>
+                        <li class="eventControl"><a href="adminEvent.html">이벤트 관리</a></li>
+                </ul>
+            </div>
+    <form class="addForm">
+        <div role="tablist" class="tabs tabs-border justify-start w-full mt-[20px] mb-[-140px]">
+                <a href="adminEvent.html" role="tab" class="tab mx-4 noticepage text-[18px] text-gray-500">이벤트 관리 </a>
+                <a href="#" role="tab" class="tab mx-4 noticepage text-[18px] text-gray-500">></a>
+                <a href="modifyevent.html" role="tab" class="tab mx-4 freepage text-[18px] text-gray-500 font-bold">이벤트 수정</a>
+            </div>
+        <fieldset>
+            <legend><span>이벤트 수정</span></legend>
+            <table>
+                <tr class="eventTit">
+                    <td class="td-col">
+                        이벤트 제목
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr class="startDate">
+                    <td class="td-col">
+                        시작일자
+                        <input type="date">
+                    </td>
+                </tr>
+                <tr class="endDate">
+                    <td class="td-col">
+                        종료일자
+                        <input type="date">
+                    </td>
+                </tr>
+                <tr class="thum">
+                    <td class="td-col">
+                        썸네일 이미지
+                        <input type="file" class="file-input">
+                    </td>
+                </tr>
+                <tr class="addlink">
+                    <td class="td-col">
+                        클릭 시 이동할 링크
+                        <label class="input w-full focus-within:outline-none focus-within:ring-0 focus-within:ring-offset-0">
+                            <input
+                                type="search"
+                                placeholder="예 : http:// 또는 #"
+                            />
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                        <td class="flex justify-center items-center gap-[20px]">
+                            <button type="button" class="s-btn w-[200px] h-[48px] bg-[#467261] text-white rounded-md text-[15px] font-medium transition hover:bg-[#365a4c] mt-[50px] mb-[50px]">
+                            저장하기
+                            </button>
+                            <button type="button" class="c-btn w-[200px] h-[48px] border-2 border-[#467261] rounded-md text-[15px] font-medium transition hover:bg-[#467261] hover:text-white mt-[50px] mb-[50px]">
+                            취소
+                            </button>
+                        </td>
+                    </tr>
+            </table>
+        </fieldset>
+    </form>
+    </div>
+</section>
+</body>
+</html>

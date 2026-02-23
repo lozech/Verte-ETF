@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETF 비교(랭킹)</title>
+    <link rel="icon" href="images/favi.png" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/compare.css">
+    <link rel="stylesheet" href="css/common.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+<body>
+<header>
+        <div class="header-wrap">
+            <h1 class="logo"><a href="index.html"><img src="images/logo-header.png" alt="베르트 로고"></a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li>
+                        <a href="#">회사 소개</a>
+                        <ul class="sub">
+                            <li><a href="#">Verte ETF 소개</a></li>
+                            <li><a href="#">경영 정보</a></li>
+                            <li><a href="#">ESG 경영</a></li>
+                            <li><a href="#">인재 채용</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">ETF 정보</a>
+                        <ul class="sub">
+                            <li><a href="compare.html">ETF 비교·랭킹</a></li>
+                            <li><a href="search.html">ETF 라인업</a></li>
+                            <li><a href="#">ETF 트렌드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">MY ETF</a>
+                        <ul class="sub">
+                            <li><a href="personal.html">개인 맞춤형 추천</a></li>
+                            <li><a href="portfolio.html">포트폴리오 제안</a></li>
+                            <li><a href="fortune.html">오늘의 투자 운세</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">투자 정보</a>
+                        <ul class="sub">
+                            <li><a href="#">시장 전망</a></li>
+                            <li><a href="#">ETF 투자 정보</a></li>
+                            <li><a href="#">연금 투자</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="event.html">이벤트</a></li>
+                            <li><a href="community.html">자유게시판</a></li>
+                            <li><a href="news.html">ETF 뉴스</a></li>
+                            <li><a href="#">Q & A</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-btn">
+                <a href="join.html"><button>Join</button></a>
+                <a href="login.html"><button>Login</button></a>
+                <a href="mypage.html"><button>Mypage</button></a>
+            </div>
+        </div>
+</header>
+<section>
+    <div class="section1Wrap">
+        <h1>상품비교</h1>
+        <p>ETF를 선택하여 상품을 비교해보세요.</p>
+        <div class="comparecontent">
+            <div class="boxA">
+                <p class="boxintxt">아래에서 상품을 선택해주세요.</p>
+            </div>
+            <img class="vs" src="images/vs1.png" alt="비교">
+            <div class="boxB">
+                <p class="boxintxt">아래에서 상품을 선택해주세요.</p>
+            </div>
+        </div>
+        <button class="btn compareBtn border-2 border-transparent bg-[#055C4D] text-white hover:bg-[#fff] hover:text-[#1a1a1a] hover:border-[#055C4D] btn-wide transition-all duration-500">
+            비교하기
+        </button>
+    </div>
+
+    <div class="section2Wrap">
+        <div class="resultBox">
+            <div class="result1">           <!-- 결과부분섹션1(주가비교차트)  -->
+                <h3>주가비교차트(3개월)</h3>
+                <div class="resultChart"><img src="images/resultchart.PNG" alt="결과차트"></div>
+            </div> 
+            <div class="result2">           <!-- 결과부분섹션2(비교내용표)  -->
+                <ul class="tab-btn">
+                    <li class="active"><a href="#">최근 1개월</a></li>
+                    <li><a href="#">최근 3개월</a></li>
+                    <li><a href="#">최근 1년</a></li>
+                    <li><a href="#">최근 5년</a></li>
+                </ul>
+                <ul class="tab-view">
+                    <li>
+                        <a href="#">
+                            <table class="month">
+                                <tr>
+                                    <th>상품명</th>
+                                    <td>1-KODEX 200선물인버스2X</td>
+                                    <td>TIGER 코리아휴머노이드로봇산업</td>
+                                </tr>
+                                <tr>
+                                    <th>가격(등락)</th>
+                                    <td>
+                                        402원 <span class="text-blue-500 font-bold text-[13px]">▼ 83%</span>  <!-- 하락시 해당과같이 표기  -->
+                                    </td>
+                                    <td>
+                                        $15,060.00
+                                        <span class="text-red-500 font-bold text-[13px]">▲ 57.2%</span>  <!-- 상승시 해당과같이 표기  -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>기초지수</th>
+                                    <td>F-KOSPI 200</td>
+                                    <td>KEDI Korea Humanoid Robot Industry Index (PR)</td>
+                                </tr>
+                                <tr>
+                                    <th>AUM/시가총액</th>
+                                    <td>1.38조</td>
+                                    <td>6,165.56억</td>
+                                </tr>
+                                <tr>
+                                    <th>총보수비용</th>
+                                    <td>0.64%</td>
+                                    <td>0.5%</td>
+                                </tr>
+                                <tr>
+                                    <th>발행사</th>
+                                    <td>삼성자산운용</td>
+                                    <td>미래에셋자산운용</td>
+                                </tr>
+                                <tr>
+                                    <th>상장일</th>
+                                    <td>2016.09.22</td>
+                                    <td>2026.01.06</td>
+                                </tr>
+                            </table>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <table class="month-3">
+                                <tr>
+                                    <th>상품명</th>
+                                    <td>2-KODEX 200선물인버스2X</td>
+                                    <td>TIGER 코리아휴머노이드로봇산업</td>
+                                </tr>
+                                <tr>
+                                    <th>가격(등락)</th>
+                                    <td>
+                                        402원 <span class="text-blue-500 font-bold text-[13px]">▼ 83%</span>  <!-- 하락시 해당과같이 표기  -->
+                                    </td>
+                                    <td>
+                                        $15,060.00
+                                        <span class="text-red-500 font-bold text-[13px]">▲ 57.2%</span>  <!-- 상승시 해당과같이 표기  -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>기초지수</th>
+                                    <td>F-KOSPI 200</td>
+                                    <td>KEDI Korea Humanoid Robot Industry Index (PR)</td>
+                                </tr>
+                                <tr>
+                                    <th>AUM/시가총액</th>
+                                    <td>1.38조</td>
+                                    <td>6,165.56억</td>
+                                </tr>
+                                <tr>
+                                    <th>총보수비용</th>
+                                    <td>0.64%</td>
+                                    <td>0.5%</td>
+                                </tr>
+                                <tr>
+                                    <th>발행사</th>
+                                    <td>삼성자산운용</td>
+                                    <td>미래에셋자산운용</td>
+                                </tr>
+                                <tr>
+                                    <th>상장일</th>
+                                    <td>2016.09.22</td>
+                                    <td>2026.01.06</td>
+                                </tr>
+                            </table>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <table class="year">
+                                <tr>
+                                    <th>상품명</th>
+                                    <td>3-KODEX 200선물인버스2X</td>
+                                    <td>TIGER 코리아휴머노이드로봇산업</td>
+                                </tr>
+                                <tr>
+                                    <th>가격(등락)</th>
+                                    <td>
+                                        402원 <span class="text-blue-500 font-bold text-[13px]">▼ 83%</span>  <!-- 하락시 해당과같이 표기  -->
+                                    </td>
+                                    <td>
+                                        $15,060.00
+                                        <span class="text-red-500 font-bold text-[13px]">▲ 57.2%</span>  <!-- 상승시 해당과같이 표기  -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>기초지수</th>
+                                    <td>F-KOSPI 200</td>
+                                    <td>KEDI Korea Humanoid Robot Industry Index (PR)</td>
+                                </tr>
+                                <tr>
+                                    <th>AUM/시가총액</th>
+                                    <td>1.38조</td>
+                                    <td>6,165.56억</td>
+                                </tr>
+                                <tr>
+                                    <th>총보수비용</th>
+                                    <td>0.64%</td>
+                                    <td>0.5%</td>
+                                </tr>
+                                <tr>
+                                    <th>발행사</th>
+                                    <td>삼성자산운용</td>
+                                    <td>미래에셋자산운용</td>
+                                </tr>
+                                <tr>
+                                    <th>상장일</th>
+                                    <td>2016.09.22</td>
+                                    <td>2026.01.06</td>
+                                </tr>
+                            </table>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <table class="year-3">
+                                <tr>
+                                    <th>상품명</th>
+                                    <td>4-KODEX 200선물인버스2X</td>
+                                    <td>TIGER 코리아휴머노이드로봇산업</td>
+                                </tr>
+                                <tr>
+                                    <th>가격(등락)</th>
+                                    <td>
+                                        402원 <span class="text-blue-500 font-bold text-[13px]">▼ 83%</span>  <!-- 하락시 해당과같이 표기  -->
+                                    </td>
+                                    <td>
+                                        $15,060.00
+                                        <span class="text-red-500 font-bold text-[13px]">▲ 57.2%</span>  <!-- 상승시 해당과같이 표기  -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>기초지수</th>
+                                    <td>F-KOSPI 200</td>
+                                    <td>KEDI Korea Humanoid Robot Industry Index (PR)</td>
+                                </tr>
+                                <tr>
+                                    <th>AUM/시가총액</th>
+                                    <td>1.38조</td>
+                                    <td>6,165.56억</td>
+                                </tr>
+                                <tr>
+                                    <th>총보수비용</th>
+                                    <td>0.64%</td>
+                                    <td>0.5%</td>
+                                </tr>
+                                <tr>
+                                    <th>발행사</th>
+                                    <td>삼성자산운용</td>
+                                    <td>미래에셋자산운용</td>
+                                </tr>
+                                <tr>
+                                    <th>상장일</th>
+                                    <td>2016.09.22</td>
+                                    <td>2026.01.06</td>
+                                </tr>
+                            </table>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="compareList">
+            <h3>ETF상품 TOP10</h3>
+            <div class="top10content">
+                <ul class="top5">
+                    <li>
+                        <p class="rankin">1위</p>
+                        <p class="prutit">KODEX 코스닥 150</p>
+                        <p class="code">229200</p>
+                        <p class="updown text-blue-500 font-bold text-[13px]">▼20%</p>
+                    </li>
+                    <li>
+                        <p class="rankin">2위</p>
+                        <p class="prutit">KODEX 코스닥 150 레버리지</p>
+                        <p class="code">233740</p>
+                        <p class="updown text-red-500 font-bold text-[13px]">▲20%</p>
+                    </li>
+                    <li>
+                        <p class="rankin">3위</p>
+                        <p class="prutit">TIGER 코스닥 150</p>
+                        <p class="code">232080</p>
+                        <p class="updown text-red-500 font-bold text-[13px]">▲20%</p>
+                    </li>
+                    <li>
+                        <p class="rankin">4위</p>
+                        <p class="prutit">KODEX 은선물(H)</p>
+                        <p class="code">144600</p>
+                        <p class="updown text-red-500 font-bold text-[13px]">▲20%</p>
+                    </li>
+                    <li>
+                        <p class="rankin">5위</p>
+                        <p class="prutit">KODEX 200</p>
+                        <p class="code">069500</p>
+                        <p class="updown text-red-500 font-bold text-[13px]">▲20%</p>
+                    </li>
+                </ul>
+                <ul class="top10">
+                    <li>
+                        <p class="rankin">6위</p>
+                        <p class="prutit">TIGER 반도체 TOP10</p>
+                        <p class="code">396500</p>
+                        <p class="updown text-red-500 font-bold text-[13px]">▲20%</p>
+                    </li>
+                    <li>
+                        <p class="rankin">7위</p>
+                        <p class="prutit">TIGER 미국 S&P500</p>
+                        <p class="code">360750</p>
+                        <p class="updown text-red-500 font-bold text-[13px]">▲20%</p>
+                    </li>
+                    <li>
+                        <p class="rankin">8위</p>
+                        <p class="prutit">ACE KRX금현물</p>
+                        <p class="code">411060</p>
+                        <p class="updown text-red-500 font-bold text-[13px]">▲20%</p>
+                    </li>
+                    <li>
+                        <p class="rankin">9위</p>
+                        <p class="prutit">KODEX 레버리지</p>
+                        <p class="code">122630</p>
+                        <p class="updown text-red-500 font-bold text-[13px]">▲20%</p>
+                    </li>
+                    <li>
+                        <p class="rankin">10위</p>
+                        <p class="prutit">TIGER 코스닥 150레버리지</p>
+                        <p class="code">233160</p>
+                        <p class="updown text-red-500 font-bold text-[13px]">▲20%</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="RecommendWrap">
+        <div class="title">
+            <h1>비교 TOP5</h1>
+            <p>최근 많이 비교된 상품입니다.</p>
+        </div>
+        <div class="section2Wrap">
+            <div class="leftVS">
+                <div class="chart-left">
+                    <img src="images/chart.PNG" alt="차트">
+                </div>
+                <table class="inform1">
+                    <tr>
+                        <th>상품명</th>
+                        <td>KODEX 코스닥 150 레버리지</td>
+                        <td>TIGER 코스닥 150 레버리지</td>
+                    </tr>
+                    <tr>
+                        <th>운용사</th>
+                        <td>삼성자산운용</td>
+                        <td>미래에셋자산운용</td>
+                    </tr>
+                    <tr>
+                        <th>최소거래량</th>
+                        <td>10주</td>
+                        <td>4주</td>
+                    </tr>
+                    <tr>
+                        <th>순자산총액</th>
+                        <td>440억원</td>
+                        <td>30억원</td>
+                    </tr>
+                    <tr>
+                        <th>수익률</th>
+                        <td>23,390원 1.01%<br>
+                            <span>(2026.01.13기준)</span>
+                        </td>
+                        <td>13,140원 0.91%<br>
+                            <span>(2026.01.13기준)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>거래량</th>
+                        <td>440만주</td>
+                        <td>250만주</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="rightList">
+                <ul class="proList">
+                    <li class="">
+                        <p class="number">01.</p>
+                        <div class="vs1">
+                            <em>379800</em>
+                            <p class="maintxt">KODEX 미국S&P500</p>
+                        </div>
+                        <div class="center"><img src="images/vs1.png" alt="vs"></div>
+                        <div class="vs2">
+                            <em>379810</em>
+                            <p class="maintxt">KODEX 미국나스닥100</p>
+                        </div>
+                    </li>
+                    <li class="on">
+                        <p class="number">02.</span>
+                        <div class="vs1">
+                            <em>233740</em>
+                            <p class="maintxt">KODEX 코스닥 150 레버리지</p>
+                        </div>
+                        <div class="center"><img src="images/vs1.png" alt="vs"></div>
+                        <div class="vs2">
+                            <em>233160</em>
+                            <p class="maintxt">TIGER 코스닥 150 레버리지</p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <p class="number">03.</span>
+                        <div class="vs1">
+                            <em>0131V0</em>
+                            <p class="maintxt">1Q 미국우주항공테크</p>
+                        </div>
+                        <div class="center"><img src="images/vs1.png" alt="vs"></div>
+                        <div class="vs2">
+                            <em>478150</em>
+                            <p class="maintxt">TIME 글로벌 우주테크&방산액티브</p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <p class="number">04.</span>
+                        <div class="vs1">
+                            <em>449450 </em>
+                            <p class="maintxt">PLUS K방산</p>
+                        </div>
+                        <div class="center"><img src="images/vs1.png" alt="vs"></div>
+                        <div class="vs2">
+                            <em>463250</em>
+                            <p class="maintxt">TIGER K방산&우주</p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <p class="number">05.</span>
+                        <div class="vs1">
+                            <em>0152E0</em>
+                            <p class="maintxt">SOL 배당성향탑픽액티브</p>
+                        </div>
+                        <div class="center"><img src="images/vs1.png" alt="vs"></div>
+                        <div class="vs2">
+                            <em>0153K0</em>
+                            <p class="maintxt">KODEX 주주환원고배당주</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+        <div class="footer-wrap">
+            <div class="footer-left">
+                <h1 class="logo"><a href="index.html"><img src="images/logo-footer.png" alt="베르트 로고 (화이트)"></a></h1>          
+            </div>
+
+            <div class="footer-right">
+
+                <ul class="footer-menu">
+                    <li>상호명 : 주식회사 베르트</li>
+                    <li>사업자등록번호 : 640-81-01354</li>
+                    <li>대표전화 : 031-902-1777</li>
+                    <li>EMAIL: verte@gmail.com </li>
+                    <li>경기도 고양시 일산동구 중앙로1275번길 38-10</li>
+                    <li>상담시간 : 평일 오전 9:00~오후 5:00</li>
+                    <li>점심시간 : 12:00 - 13:00(토-일요일,공휴일 휴무)</li>
+                </ul>
+                <p class="copyright">Copyright(C) 2025 VERTE MANAGEMENT CO. LTD. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+<script src="js/common.js"></script>
+<script src="js/compare.js"></script>
+</body>
+</html>

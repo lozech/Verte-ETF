@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN ETF 종목 정보(Meta) 관리</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/adminProduct.css">
+    <link rel="icon" type="image/png" href="images/favi.png">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/common.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/4aff7483c9.js" crossorigin="anonymous"></script>
+    <script src="js/adminProduct.js" defer></script>
+</head>
+<body>
+    <section class="adminpage">
+        <div class="adminpage-wrap">
+            <div class="side-menu">
+                <div class="logo"><a href="index.html"><img src="images/logo-footer.png" alt="베르트 로고"></a></div>
+
+                <ul class="menu-list">
+                    <li class="adminControl"><a href="admin.html">HOME</a></li>
+                    <li class="userControl"><a href="adminuser.html">회원관리</a></li>
+                    <li class="priceControl"><a href="adminPrice.html">ETF 시세관리</a></li>
+                    <li class="productControl"><a href="adminProduct.html">ETF 종목 정보(Meta) 관리</a></li>
+                    <li class="eventControl"><a href="adminEvent.html">이벤트 관리</a></li>
+                </ul>
+            </div>
+            <form class="tablesection">
+                <table>
+                    <div class="usertit-wrap">
+                        <h2 class="user-tit">ETF 종목 정보(Meta) 관리</h2>
+                        <button type="button" class="abtn bg-[#055C4D] text-white px-5 py-2 rounded-md hover:bg-[#00A4B7]  text-lg"
+                            onclick="location.href='addProduct.html'">
+                            신규종목등록
+                        </button>
+                    </div>
+                    <thead>
+                        <tr>
+                            <th>ID(코드)</th>
+                            <th>종목명</th>
+                            <th>테마</th>
+                            <th>위험등급</th>
+                            <th>보수등급</th>
+                            <th>ISIN 코드</th>
+                            <th>관리</th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="productTbody">
+                        <tr data-userid="10">
+                            <td>KR0000488980</td>
+                            <td class="proTit">SOL 26-12 회사채(AA이상)액티브</td>
+                            <td><label class="border-none">
+                                    <select name="thema" class="select select-bordered">
+                                        <option>채권/금리</option>
+                                        <option>파생(인버스)</option>
+                                        <option>해외주식</option>
+                                        <option>해외주식(미국)</option>
+                                        <option>단기자금/MMF</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="border-none">
+                                    <select name="dangerlevel" class="select select-bordered">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="border-none">
+                                    <select name="conlevel" class="select select-bordered">
+                                        <option>mid</option>
+                                        <option>high</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td class="isincode"></td>
+                            <td class="lineCheck">
+                                <div class="flex justify-center items-center gap-1 h-full py-2">
+                                    <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                    <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">삭제</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-userid="9">
+                            <td></td>
+                            <td class="proTit"></td>
+                            <td><label class="border-none">
+                                    <select name="thema" class="select select-bordered">
+                                        <option>채권/금리</option>
+                                        <option>파생(인버스)</option>
+                                        <option>해외주식</option>
+                                        <option>해외주식(미국)</option>
+                                        <option>단기자금/MMF</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td data-userid="8">
+                                <label class="border-none">
+                                    <select name="dangerlevel" class="select select-bordered">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="border-none">
+                                    <select name="conlevel" class="select select-bordered">
+                                        <option>mid</option>
+                                        <option>high</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td class="isincode"></td>
+                            <td class="lineCheck">
+                                <div class="flex justify-center items-center gap-1 h-full py-2">
+                                    <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                    <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">삭제</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-userid="8">
+                            <td></td>
+                            <td class="proTit"></td>
+                            <td><label class="border-none">
+                                    <select name="thema" class="select select-bordered">
+                                        <option>채권/금리</option>
+                                        <option>파생(인버스)</option>
+                                        <option>해외주식</option>
+                                        <option>해외주식(미국)</option>
+                                        <option>단기자금/MMF</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="border-none">
+                                    <select name="dangerlevel" class="select select-bordered">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="border-none">
+                                    <select name="conlevel" class="select select-bordered">
+                                        <option>mid</option>
+                                        <option>high</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td class="isincode"></td>
+                            <td class="lineCheck">
+                                <div class="flex justify-center items-center gap-1 h-full py-2">
+                                    <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                    <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">삭제</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-userid="7">
+                            <td></td>
+                            <td class="proTit"></td>
+                            <td><label class="border-none">
+                                    <select name="thema" class="select select-bordered">
+                                        <option>채권/금리</option>
+                                        <option>파생(인버스)</option>
+                                        <option>해외주식</option>
+                                        <option>해외주식(미국)</option>
+                                        <option>단기자금/MMF</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="border-none">
+                                    <select name="dangerlevel" class="select select-bordered">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="border-none">
+                                    <select name="conlevel" class="select select-bordered">
+                                        <option>mid</option>
+                                        <option>high</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td class="isincode"></td>
+                            <td class="lineCheck">
+                                <div class="flex justify-center items-center gap-1 h-full py-2">
+                                    <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                    <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">삭제</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-userid="6">
+                            <td></td>
+                            <td class="proTit"></td>
+                            <td><label class="border-none">
+                                    <select name="thema" class="select select-bordered">
+                                        <option>채권/금리</option>
+                                        <option>파생(인버스)</option>
+                                        <option>해외주식</option>
+                                        <option>해외주식(미국)</option>
+                                        <option>단기자금/MMF</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="border-none">
+                                    <select name="dangerlevel" class="select select-bordered">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="border-none">
+                                    <select name="conlevel" class="select select-bordered">
+                                        <option>mid</option>
+                                        <option>high</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td class="isincode"></td>
+                            <td class="lineCheck">
+                                <div class="flex justify-center items-center gap-1 h-full py-2">
+                                    <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                    <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">삭제</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-userid="5">
+                            <td></td>
+                            <td class="proTit"></td>
+                            <td><label class="border-none">
+                                    <select name="thema" class="select select-bordered">
+                                        <option>채권/금리</option>
+                                        <option>파생(인버스)</option>
+                                        <option>해외주식</option>
+                                        <option>해외주식(미국)</option>
+                                        <option>단기자금/MMF</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="border-none">
+                                    <select name="dangerlevel" class="select select-bordered">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="border-none">
+                                    <select name="conlevel" class="select select-bordered">
+                                        <option>mid</option>
+                                        <option>high</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td class="isincode"></td>
+                            <td class="lineCheck">
+                                <div class="flex justify-center items-center gap-1 h-full py-2">
+                                    <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                    <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">삭제</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-userid="4">
+                            <td></td>
+                            <td class="proTit"></td>
+                            <td><label class="border-none">
+                                    <select name="thema" class="select select-bordered">
+                                        <option>채권/금리</option>
+                                        <option>파생(인버스)</option>
+                                        <option>해외주식</option>
+                                        <option>해외주식(미국)</option>
+                                        <option>단기자금/MMF</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="border-none">
+                                    <select name="dangerlevel" class="select select-bordered">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="border-none">
+                                    <select name="conlevel" class="select select-bordered">
+                                        <option>mid</option>
+                                        <option>high</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td class="isincode"></td>
+                            <td class="lineCheck">
+                                <div class="flex justify-center items-center gap-1 h-full py-2">
+                                    <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                    <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">삭제</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-userid="3">
+                            <td></td>
+                            <td class="proTit"></td>
+                            <td><label class="border-none">
+                                    <select name="thema" class="select select-bordered">
+                                        <option>채권/금리</option>
+                                        <option>파생(인버스)</option>
+                                        <option>해외주식</option>
+                                        <option>해외주식(미국)</option>
+                                        <option>단기자금/MMF</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="border-none">
+                                    <select name="dangerlevel" class="select select-bordered">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="border-none">
+                                    <select name="conlevel" class="select select-bordered">
+                                        <option>mid</option>
+                                        <option>high</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td class="isincode"></td>
+                            <td class="lineCheck">
+                                <div class="flex justify-center items-center gap-1 h-full py-2">
+                                    <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                    <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">삭제</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-userid="2">
+                            <td></td>
+                            <td class="proTit"></td>
+                            <td><label class="border-none">
+                                    <select name="thema" class="select select-bordered">
+                                        <option>채권/금리</option>
+                                        <option>파생(인버스)</option>
+                                        <option>해외주식</option>
+                                        <option>해외주식(미국)</option>
+                                        <option>단기자금/MMF</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="border-none">
+                                    <select name="dangerlevel" class="select select-bordered">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="border-none">
+                                    <select name="conlevel" class="select select-bordered">
+                                        <option>mid</option>
+                                        <option>high</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td class="isincode"></td>
+                            <td class="lineCheck">
+                                <div class="flex justify-center items-center gap-1 h-full py-2">
+                                    <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                    <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">삭제</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-userid="2">
+                            <td></td>
+                            <td class="proTit"></td>
+                            <td><label class="border-none">
+                                    <select name="thema" class="select select-bordered">
+                                        <option>채권/금리</option>
+                                        <option>파생(인버스)</option>
+                                        <option>해외주식</option>
+                                        <option>해외주식(미국)</option>
+                                        <option>단기자금/MMF</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="border-none">
+                                    <select name="dangerlevel" class="select select-bordered">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="border-none">
+                                    <select name="conlevel" class="select select-bordered">
+                                        <option>mid</option>
+                                        <option>high</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td class="isincode"></td>
+                            <td class="lineCheck">
+                                <div class="flex justify-center items-center gap-1 h-full py-2">
+                                    <button type="button" class="modibtn btn btn-sm btn-success !bg-emerald-500 !text-white border-none px-4">수정</button>
+                                    <button type="button" class="delebtn btn btn-sm btn-error !bg-red-500 !text-white border-none px-4">삭제</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="mbtn btn btn-outline flex justify-center"><button type="button" onclick="" class="more">더보기 +</button></div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

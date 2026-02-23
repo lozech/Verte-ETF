@@ -1,0 +1,278 @@
+@charset "UTF-8";
+
+/* 헤더 */
+header{
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to right, #121216, #2e2d5a, #0c0644);
+    color: #fff; 
+    transition: height 0.3s ease;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 10;
+}
+
+header.active{
+    height: 320px;
+}
+
+header .header-wrap{
+    width: 1620px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* 헤더: 로고 */
+header .header-wrap .logo{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+}
+
+header .header-wrap .logo img{
+    width: 100%;
+    height: 100%;
+    opacity: 90%;
+}
+
+/* 헤더: gnb */
+header .header-wrap .gnb{
+    display: flex;
+    justify-content: center;
+}
+
+header .header-wrap .gnb>li{
+    position: relative;
+}
+
+header .header-wrap .gnb>li>a{
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    width: 120px;
+    height: 100px;
+    line-height: 100px;
+    border-bottom: 2px solid transparent;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+header .header-wrap .gnb>li:hover>a{
+    color: #00A4B7;
+    border-bottom: 2px solid #00A4B7;
+}
+
+header .header-wrap .gnb>li>a.active{
+    width: 150px;
+}
+
+header .header-wrap .gnb>li .sub{
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+    position: absolute;
+    top:100px;
+    left: 0;
+    color: #fff;
+}
+
+header .header-wrap .gnb>li>ul>li:nth-child(1)>a{
+    margin-top: 20px;
+}
+
+header .header-wrap .gnb>li>ul>li>a{
+    display: block;
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+}
+
+header .header-wrap .gnb>li>ul>li>a:hover{
+    color: #00A4B7;
+    font-weight: 500;
+    transition: all 0.5s;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* 헤더: 버튼 */
+header .header-btn{
+    position: absolute;
+    top:50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+header .header-btn button{
+    border: none;
+    background-color: transparent;
+    padding: 10px 15px;
+    transition: all 0.3s;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+}
+
+header .header-btn button:hover{
+    background-color: #00A4B7;
+    color: white;
+}
+
+.bg-layer{ 
+    width: 100%; 
+    background: linear-gradient(to right, #121216, #2e2d5a, #0c0644); 
+    color: white; 
+    text-align: center; 
+    padding: 200px 20px 100px 20px; 
+    overflow: hidden;
+}
+
+.bg-layer h1 {
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px #a29bfe;
+    font-size: 2.5rem;
+    animation: floatTitle 4s ease-in-out infinite;
+}
+@keyframes floatTitle {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.subtitle { 
+    color: #b2bec3; 
+    margin-bottom: 75px; 
+    font-weight: 300; 
+}
+
+.zodiac-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.zodiac-card {
+    border-radius: 15px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.zodiac-card img{
+    max-width: 100%;
+    width: 200px;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.2));
+    transition:
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.6s ease;
+}
+.icon { 
+    font-size: 40px; 
+    margin-bottom: 10px; 
+}
+.name { 
+    font-weight: 500; 
+    font-size: 16px; 
+    transition:
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.6s ease;
+}
+    
+.zodiac-card:hover img {
+    transform: translateY(-30px) ;
+    filter: drop-shadow(0 12px 30px rgba(116, 185, 255, 0.75));
+}
+.zodiac-card:hover .name {
+    text-shadow: 1px 1px 5px #f5f5f5;
+    transform: translateY(-20px) ;
+}
+
+    
+
+/* 푸터 */
+footer{
+    background: linear-gradient(to right, #121216, #2e2d5a, #0c0644); 
+    color: white;
+    padding: 50px 0;
+}
+
+footer .footer-wrap{
+    width: 1460px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 푸터:좌측 */
+footer .footer-wrap .footer-left .logo img{
+    width: 80%;
+}
+
+/* 푸터: 우측 */
+footer .footer-wrap .footer-right .footer-menu{
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    margin-top: 15px;
+    /* margin-right: 50px; */
+}
+
+footer .footer-wrap .footer-right .footer-menu li{
+    padding: 0px 20px;
+    margin-bottom: 5px;
+}
+
+footer .footer-wrap .footer-right .footer-menu li:nth-child(2){
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+footer .footer-wrap .footer-right .footer-menu li:nth-child(3),
+footer .footer-wrap .footer-right .footer-menu li:nth-child(5),
+footer .footer-wrap .footer-right .footer-menu li:nth-child(7){
+    padding-right: 0px;
+}
+
+footer .footer-wrap .footer-right .footer-menu li:nth-child(4){
+    border-right: 1px solid white;
+}
+
+footer .footer-wrap .footer-right .footer-menu li:nth-child(6){
+    border-right: 1px solid white;
+}
+
+footer .footer-wrap .footer-right .footer-menu li:nth-child(6),
+footer .footer-wrap .footer-right .footer-menu li:nth-child(7){
+    margin-top: 20px;
+}
+
+footer .footer-wrap .footer-right .copyright{
+    padding-left: 20px;
+    opacity: 0.5;
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+

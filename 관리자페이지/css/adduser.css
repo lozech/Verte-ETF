@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* 헤더 */
+.adminpage{
+    width: 100%;
+    min-height: 100vh;
+}
+.adminpage .adminpage-wrap{
+    display: flex;
+    min-height: 100vh;
+}
+.adminpage .adminpage-wrap .side-menu{
+    width: 260px;
+    background-color: #055C4D;
+    padding: 40px 24px;
+    box-sizing: border-box;
+}
+.adminpage .adminpage-wrap .side-menu .logo{
+    width: 200px;
+    height: 80px;
+    margin-bottom: 30px;
+}
+.adminpage .adminpage-wrap .side-menu .menu-list{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.adminpage .adminpage-wrap .side-menu .menu-list li{
+    cursor: pointer;
+    transition: 0.2s;
+}
+.adminpage .adminpage-wrap .side-menu .menu-list li:hover a{
+    opacity: 1;
+    font-weight: 700;
+}
+.adminpage .adminpage-wrap .side-menu .menu-list li a{
+    font-size: 18px;
+    color: #ffffff;
+    opacity: 0.6;
+}
+
+.addForm{
+    width: 1500px;
+    height: 100%;
+    /* background-color: #055C4D; */
+    /* margin: 0 auto; */
+    margin-left: 50px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    margin-bottom: 150px;
+}
+.addForm fieldset{
+    margin-top: -350px;
+}
+.addForm fieldset legend span{
+    padding: 200px 0px 0px 30px;
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 70px;
+    /* margin-top: 50px; */
+    display: block;
+    text-align: center;
+}
+.addForm fieldset{
+    width: 1300px;
+    height: 100%;
+    margin: 0 auto;
+    margin-left: 10px;
+    /* border: 1px solid #B8B3B3; */
+    border-radius: 30px;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    /* background-color: #b8b3b325; */
+    box-shadow: 3px 10px 20px #b8b3b3b3;
+}
+.addForm fieldset table{
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.addForm fieldset table td{
+    width: 800px;
+    margin: 0 auto;
+}
+.addForm fieldset table .td-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 20px;
+    margin: 30px 0;
+}
+.addForm fieldset table .td-col input{
+    width: 800px; height: 50px;
+    border: 1px solid #B8B3B3;
+    border-radius: 20px;
+    padding: 10px 30px;
+    box-sizing: border-box;
+}
+.addForm fieldset table .td-col input::placeholder{
+    font-size: 15px;
+    color: #B8B3B3;
+}
+
+
+
+

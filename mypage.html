@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <link rel="icon" href="images/favi.png" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/mypage.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/93aaeb1c35.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+<header>
+    <div class="header-wrap">
+        <h1 class="logo"><a href="index.html"><img src="images/logo-header.png" alt="베르트 로고"></a></h1>
+        <nav>
+            <ul class="gnb">
+                <li>
+                    <a href="#">회사 소개</a>
+                    <ul class="sub">
+                        <li><a href="#">Verte ETF 소개</a></li>
+                        <li><a href="#">경영 정보</a></li>
+                        <li><a href="#">ESG 경영</a></li>
+                        <li><a href="#">인재 채용</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">ETF 정보</a>
+                    <ul class="sub">
+                        <li><a href="compare.html">ETF 비교·랭킹</a></li>
+                        <li><a href="search.html">ETF 라인업</a></li>
+                        <li><a href="#">ETF 트렌드</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">MY ETF</a>
+                    <ul class="sub">
+                        <li><a href="personal.html">개인 맞춤형 추천</a></li>
+                        <li><a href="portfolio.html">포트폴리오 제안</a></li>
+                        <li><a href="fortune.html">오늘의 투자 운세</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">투자 정보</a>
+                    <ul class="sub">
+                        <li><a href="#">시장 전망</a></li>
+                        <li><a href="#">ETF 투자 정보</a></li>
+                        <li><a href="#">연금 투자</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">커뮤니티</a>
+                    <ul class="sub">
+                        <li><a href="event.html">이벤트</a></li>
+                        <li><a href="community.html">자유게시판</a></li>
+                        <li><a href="news.html">ETF 뉴스</a></li>
+                        <li><a href="#">Q & A</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-btn">
+            <a href="join.html"><button>Join</button></a>
+            <a href="login.html"><button>Login</button></a>
+            <a href="mypage.html"><button>Mypage</button></a>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="mypage-wrap">
+        <div class="content-wrap">
+            <h1>My Page</h1>
+            <div class="profile-area">
+                <div class="profile-left">
+                    <h3 class="info-title">내 정보</h3>
+                    <div class="movebtn left">
+                        <a href="mypage-edit.html">내 계정관리 &gt;</a>
+                    </div>
+
+                    <div class="profile-img-wrap">
+                        <div class="profile-img"></div>
+                        <div class="camera-btn">
+                            <i class="fa-regular fa-camera"></i>
+                        </div>
+                    </div>
+
+                    <div class="profile-info">
+                        <div class="id-line">
+                            <p class="id">ID: <span>star123</span></p>
+                            <div class="level">🌱 돋움</div>
+                        </div>
+                        <p class="type">(공격적인 투자성향)</p>
+                    </div>
+                </div>
+
+                <!-- 가운데 라인 -->
+                <div class="profile-line"></div>
+
+                <!-- 오른쪽 -->
+                <div class="profile-right">
+                    <h3 class="info-title">MY Menu</h3>
+                    <div class="movebtn right">
+                        <a href="#">MY Menu 편집 &gt;</a>
+                    </div>
+
+                    <div class="quick-menu">
+                        <div class="quick-item">테마별 ETF</div>
+                        <div class="quick-item">ETF 비교</div>
+                        <div class="quick-item">최근 본 종목</div>
+                        <div class="quick-item">바로가기</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== 2번 영역 : 투자 정보 ===== -->
+            <div class="info-area">
+
+            <!-- 투자성향분석 (왼쪽) -->
+            <div class="info-box type-box bg-white rounded-xl p-10">
+                    <h3 class="info-title">투자성향분석</h3>
+                    <div class="movebtn test"><a href="Research.html">테스트 다시하기 &gt;</a></div>
+
+                <div class="mt-12 flex flex-col gap-10">
+                <div class="grid grid-cols-[120px_1fr_120px] items-center gap-8">
+                    <div class="text-left font-bold text-gray-700">소량투자</div>
+                    <div class="h-[30px] rounded-full border-[3px] border-[#3f6f60] bg-white flex items-center">
+                        <div class="h-full bg-[#3f6f60] rounded-l-full rounded-r-full mx-[-3px]" style="width:55%"></div>
+                    </div>
+                    <div class="text-right font-bold text-gray-700">대량투자</div>
+                </div>
+
+                <div class="grid grid-cols-[120px_1fr_120px] items-center gap-8">
+                    <div class="text-left font-bold text-gray-700">안전</div>
+                    <div class="h-[30px] rounded-full border-[3px] border-[#3f6f60] bg-white flex items-center">
+                        <div class="h-full bg-[#3f6f60] rounded-full mx-[-3px]" style="width:78%"></div>
+                    </div>
+                    <div class="text-right font-bold text-gray-700 attack">공격</div>
+                </div>
+
+                <div class="grid grid-cols-[120px_1fr_120px] items-center gap-8">
+                    <div class="text-left font-bold text-gray-700">해외상품</div>
+                    <div class="h-[30px] rounded-full border-[3px] border-[#3f6f60] bg-white flex items-center">
+                    <div class="h-full bg-[#3f6f60] rounded-full mx-[-3px]" style="width:35%"></div>
+                    </div>
+                    <div class="text-right font-bold text-gray-700">국내상품</div>
+                </div>
+                </div>
+            </div>
+
+            <!-- 투자 목표 (오른쪽) -->
+            <div class="info-box goal-box">
+                <div class="movebtn goal"><a href="#">목표 다시 설정 &gt;</a></div>
+
+                <h3 class="info-title">나의 투자 목표</h3>
+
+                <div class="goal-content">
+                <!-- 도넛 그래프 -->
+                <div class="donut-graph">
+                    <span class="label l1">국내 ETF<br>25%</span>
+                    <span class="label l2">해외 ETF<br>30%</span>
+                    <span class="label l3">테마 ETF<br>15%</span>
+                    <span class="label l4">채권 / 안정자산<br>20%</span>
+                    <span class="label l5">현금<br>10%</span>
+                    <div class="donut-inner"></div>
+                </div>
+
+                <!-- 비율 리스트 -->
+                <ul class="goal-ratio">
+                    <p>- 비율 -</p>
+                    <li><span class="label">국내 ETF</span><span class="value">25%</span></li>
+                    <li><span class="label">해외 ETF</span><span class="value">30%</span></li>
+                    <li><span class="label">테마 ETF</span><span class="value">15%</span></li>
+                    <li><span class="label">채권 / 안정자산</span><span class="value">20%</span></li>
+                    <li><span class="label">현금</span><span class="value">10%</span></li>
+                </ul>
+                </div>
+            </div>
+
+            </div>
+            <!-- ===== 3번 영역 : 관심 종목 ===== -->
+            <div class="favorite-area">
+                <h3 class="favorite-title">내 관심 종목</h3>
+                <ul class="favorite-list">
+                    <li class="favorite-item">
+                        <div class="brand">KODEX</div>
+                        <p class="name">미국AI테크 TOP10</p>
+                        <p class="code">485540</p>
+
+                        <!-- ⭐ 종목 하단 아이콘 영역 -->
+                        <div class="item-icons">
+                            <div class="icon ai"></div>
+                        </div>
+                    </li>
+
+                    <li class="favorite-item">
+                        <div class="brand">WON</div>
+
+                        <p class="name">미국우주항공방산</p>
+                        <p class="code">440910</p>
+
+                        <div class="item-icons">
+                            <div class="icon space"></div>
+                        </div>
+                    </li>
+
+                    <li class="favorite-item">
+                        <div class="brand">SOL</div>
+
+                        <p class="name">자동차TOP3플러스</p>
+                        <p class="code">466930</p>
+
+                        <div class="item-icons">
+                            <div class="icon car"></div>
+                        </div>
+                    </li>
+
+                    <!-- 추가 카드 -->
+                    <li class="favorite-item add">
+                        <a href="search.html">
+                            <span class="plus">+</span>
+                            <p>관심종목 추가</p>
+                        </a>
+                    </li>
+
+                    <li class="favorite-item add">
+                        <a href="search.html">
+                            <span class="plus">+</span>
+                            <p>관심종목 추가</p>
+                        </a>
+                    </li>
+
+                    <li class="favorite-item add">
+                        <a href="search.html">
+                            <span class="plus">+</span>
+                            <p>관심종목 추가</p>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="footer-wrap">
+        <div class="footer-left">
+            <h1 class="logo"><a href="index.html"><img src="images/logo-footer.png" alt="베르트 로고 (화이트)"></a></h1>          
+        </div>
+
+        <div class="footer-right">
+
+            <ul class="footer-menu">
+                <li>상호명 : 주식회사 베르트</li>
+                <li>사업자등록번호 : 640-81-01354</li>
+                <li>대표전화 : 031-902-1777</li>
+                <li>EMAIL: verte@gmail.com </li>
+                <li>경기도 고양시 일산동구 중앙로1275번길 38-10</li>
+                <li>상담시간 : 평일 오전 9:00~오후 5:00</li>
+                <li>점심시간 : 12:00 - 13:00(토-일요일,공휴일 휴무)</li>
+            </ul>
+            <p class="copyright">Copyright(C) 2025 VERTE MANAGEMENT CO. LTD. ALL RIGHTS RESERVED.</p>
+        </div>
+    </div>
+</footer>
+<script src="js/common.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="icon" type="image/png" href="images/favi.png">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/common.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/4aff7483c9.js" crossorigin="anonymous"></script>
+    <script src="js/admin.js" defer></script>
+</head>
+<body>
+<section class="adminpage">
+        <div class="adminpage-wrap">
+            <div class="side-menu">
+                <div class="logo"><a href="index.html"><img src="images/logo-footer.png" alt="베르트 로고"></a></div>
+            <ul class="menu-list">
+                <li class="adminControl"><a href="admin.html">HOME</a></li>
+                <li class="userControl"><a href="adminuser.html">회원관리</a></li>
+                <li class="priceControl"><a href="adminPrice.html">ETF 시세관리</a></li>
+                <li class="productControl"><a href="adminProduct.html">ETF 종목 정보(Meta) 관리</a></li>
+                <li class="eventControl"><a href="adminEvent.html">이벤트 관리</a></li>
+            </ul>
+            </div>
+            <div class="controlpanel-wrap">
+                <div class="dash-tit">대시보드</div>
+                <div class="control-firstline">
+                    <form class="tablesection user-panel" onclick="location.href='adminuser.html'">
+                        <div class="usertit-wrap">
+                                <h2 class="user-tit">최근 가입회원 목록</h2>
+                                <div class="a-btn">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                        </div>
+                        <table>
+                            
+                            <thead>
+                                <tr>
+                                    <th class="numbering">NO</th>
+                                    <th class="nickname">아이디(닉네임)</th>
+                                    <th class="mailinfo">이메일</th>
+                                    <th class="usertype">회원유형</th>
+                                    <th class="dangertype">위험성향</th>
+                                    <th class="joindate">가입날짜</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="userTbody">
+                                <tr data-userid="15">
+                                    <td class="numbering1">15</td>
+                                    <td class="nickname1">3333</td>
+                                    <td class="mailinfo1">example@gmail.com</td>
+                                    <td class="usertype1">
+                                        <label class="select border-none px-30 w-30">
+                                            <select name="user user-select" class="select select-bordered px-5">
+                                                <option>회원</option>
+                                                <option>admin</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                    <td class="favtype1">
+                                        <label class="select border-none w-35">
+                                            <select name="favorite user-select" class="select select-bordered px-5">
+                                                <option>natural</option>
+                                                <option>conservative</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                    <td class="joindate">
+                                        2026-01-07
+                                    </td>
+                                </tr>
+                                <tr data-userid="14">
+                                    <td class="numbering1">14</td>
+                                    <td class="nickname1"></td>
+                                    <td class="mailinfo1"></td>
+                                    <td class="usertype1">
+                                        <label class="select border-none px-30 w-30">
+                                            <select name="user user-select" class="select select-bordered px-5">
+                                                <option>회원</option>
+                                                <option selected>admin</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                    <td class="favtype1">
+                                        <label class="select border-none w-35">
+                                            <select name="favorite user-select" class="select select-bordered px-5">
+                                                <option>natural</option>
+                                                <option>conservative</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                    <td class="joindate">
+                                        
+                                    </td>
+                                </tr>
+                                <tr data-userid="13">
+                                    <td class="numbering1">13</td>
+                                    <td class="nickname1"></td>
+                                    <td class="mailinfo1"></td>
+                                    <td class="usertype1">
+                                        <label class="select border-none px-30 w-30">
+                                            <select name="user user-select" class="select select-bordered px-5">
+                                                <option>회원</option>
+                                                <option>admin</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                    <td class="favtype1">
+                                        <label class="select border-none w-35">
+                                            <select name="favorite user-select" class="select select-bordered px-5">
+                                                <option>natural</option>
+                                                <option>conservative</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                    <td class="joindate">
+                                        
+                                    </td>
+                                </tr>
+                                <tr data-userid="12">
+                                    <td class="numbering1">12</td>
+                                    <td class="nickname1"></td>
+                                    <td class="mailinfo1"></td>
+                                    <td class="usertype1">
+                                        <label class="select border-none px-30 w-30">
+                                            <select name="user user-select" class="select select-bordered px-5">
+                                                <option>회원</option>
+                                                <option>admin</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                    <td class="favtype1">
+                                        <label class="select border-none w-35">
+                                            <select name="favorite user-select" class="select select-bordered px-5">
+                                                <option>natural</option>
+                                                <option>conservative</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                    <td class="joindate">
+                                        
+                                    </td>
+                                </tr>
+                                <tr data-userid="11">
+                                    <td class="numbering1">11</td>
+                                    <td class="nickname1"></td>
+                                    <td class="mailinfo1"></td>
+                                    <td class="usertype1">
+                                        <label class="select border-none px-30 w-30">
+                                            <select name="user user-select" class="select select-bordered px-5">
+                                                <option>회원</option>
+                                                <option>admin</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                    <td class="favtype1">
+                                        <label class="select border-none w-35">
+                                            <select name="favorite user-select" class="select select-bordered px-5">
+                                                <option>natural</option>
+                                                <option>conservative</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                    <td class="joindate">
+                                        
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                    <form class="tablesection product-panel" onclick="location.href='adminProduct.html'">
+                        <div class="usertit-wrap">
+                                <h2 class="user-tit">최근 추가 ETF 종목 정보(Meta) 목록</h2>
+                                <div class="a-btn">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID(코드)</th>
+                                    <th>종목명</th>
+                                    <th>위험등급</th>
+                                    <th>보수등급</th>
+                                </tr>
+                            </thead>
+
+                            <tbody class="productTbody">
+                                <tr data-userid="10">
+                                    <td>KR0000488980</td>
+                                    <td class="proTit">SOL 26-12 회사채(AA이상)액티브</td>
+                                    <td>
+                                        <label class="border-none">
+                                            <select name="dangerlevel product-select" class="product-select select select-bordered">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="border-none">
+                                            <select name="conlevel product-select" class="product-select select select-bordered">
+                                                <option>mid</option>
+                                                <option>high</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr data-userid="9">
+                                    <td></td>
+                                    <td class="proTit"></td>
+                                    <td data-userid="8">
+                                        <label class="border-none">
+                                            <select name="dangerlevel" class="product-select select select-bordered">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="border-none">
+                                            <select name="conlevel" class="product-select select select-bordered">
+                                                <option>mid</option>
+                                                <option>high</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr data-userid="8">
+                                    <td></td>
+                                    <td class="proTit"></td>
+                                    <td>
+                                        <label class="border-none">
+                                            <select name="dangerlevel" class="product-select select select-bordered">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="border-none">
+                                            <select name="conlevel" class="product-select select select-bordered">
+                                                <option>mid</option>
+                                                <option>high</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr data-userid="7">
+                                    <td></td>
+                                    <td class="proTit"></td>
+                                    <td>
+                                        <label class="border-none">
+                                            <select name="dangerlevel" class="product-select select select-bordered">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="border-none">
+                                            <select name="conlevel" class="product-select select select-bordered">
+                                                <option>mid</option>
+                                                <option>high</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr data-userid="6">
+                                    <td></td>
+                                    <td class="proTit"></td>
+                                    <td>
+                                        <label class="border-none">
+                                            <select name="dangerlevel" class="product-select select select-bordered">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="border-none">
+                                            <select name="conlevel" class="product-select select select-bordered">
+                                                <option>mid</option>
+                                                <option>high</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+                <div class="control-secondline">
+                    <form class="tablesection price-panel" onclick="location.href='adminPrice.html'">
+                        <div class="usertit-wrap">
+                                <h2 class="user-tit">최근 추가 ETF 시세 목록</h2>
+                                <div class="a-btn">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>기준일자</th>
+                                    <th>종목코드</th>
+                                    <th>종가(원)</th>
+                                    <th>등락률</th>
+                                </tr>
+                            </thead>
+                            <tbody id="priceTbody">
+                                <tr data-userid="5">
+                                    <td class="stand-date">
+                                        <input type="date">
+                                    </td>
+                                    <td class="pro-code">KR0000488980</td>
+                                    <td class="pro-price">51,050</td>
+                                    <td class="fluctuation-rate">1.11</td>
+                                </tr>
+                                <tr data-userid="4">
+                                    <td class="stand-date">
+                                        <input type="date">
+                                    </td>
+                                    <td class="pro-code"></td>
+                                    <td class="proTit"></td>
+                                    <td class="fluctuation-rate">
+                                        
+                                    </td>
+                                </tr>
+                                <tr data-userid="3">
+                                    <td class="stand-date">
+                                        <input type="date">
+                                    </td>
+                                    <td class="pro-code"></td>
+                                    <td class="proTit"></td>
+                                    <td class="fluctuation-rate">
+                                        
+                                    </td>
+                                </tr>
+                                <tr data-userid="2">
+                                    <td class="stand-date">
+                                        <input type="date">
+                                    </td>
+                                    <td class="pro-code"></td>
+                                    <td class="proTit"></td>
+                                    <td class="fluctuation-rate">
+                                        
+                                    </td>
+                                </tr>
+                                <tr data-userid="1">
+                                    <td class="stand-date">
+                                        <input type="date">
+                                    </td>
+                                    <td class="pro-code"></td>
+                                    <td class="proTit"></td>
+                                    <td class="fluctuation-rate">
+                                        
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                    <form class="tablesection event-panel" onclick="location.href='adminEvent.html'">
+                        <div class="usertit-wrap">
+                                <h2 class="user-tit">최근 추가 이벤트 목록</h2>
+                                <div class="a-btn">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="numbering">NO</th>
+                                    <th class="current">상태</th>
+                                    <th class="tit">제목</th>
+                                    <th class="postDate">게시일자</th>
+                                </tr>
+                            </thead>
+                            <tbody class="eventTbody">
+                                <tr data-userid="5">
+                                    <td>5</td>
+                                    <td class="currentChange">
+                                        <label class="select border-none w-25">
+                                            <select name="user" class="event-select select select-bordered px-5">
+                                                <option>게시중</option>
+                                                <option>종료</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                    <td class="eventTit">
+                                        요즘 대세 국장 대표 ETF 매수 이벤트
+                                    </td>
+                                    <td>
+                                        2026-01-05 ~ 2026-01-28
+                                    </td>
+                                </tr>
+                                <tr data-userid="4">
+                                    <td>4</td>
+                                    <td class="currentChange">
+                                        <label class="select border-none w-25">
+                                            <select name="user" class="event-select select select-bordered px-5">
+                                                <option>게시중</option>
+                                                <option selected>종료</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                    <td class="eventTit">
+                                        숏박스와 함께하는 국장투자 이벤트(종료)
+                                    </td>
+                                    <td>
+                                        2026-01-05 ~ 2026-01-07
+                                    </td>
+                                </tr>
+                                <tr data-userid="3">
+                                    <td></td>
+                                    <td class="currentChange">
+                                        <label class="select border-none w-25">
+                                            <select name="user" class="event-select select select-bordered px-5">
+                                                <option>게시중</option>
+                                                <option>종료</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr data-userid="2">
+                                    <td></td>
+                                    <td class="currentChange">
+                                        <label class="select border-none w-25">
+                                            <select name="user" class="event-select select select-bordered px-5">
+                                                <option>게시중</option>
+                                                <option>종료</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr data-userid="1">
+                                    <td></td>
+                                    <td class="currentChange">
+                                        <label class="select border-none w-25">
+                                            <select name="user" class="event-select select select-bordered px-5">
+                                                <option>게시중</option>
+                                                <option>종료</option>
+                                            </select>
+                                        </label>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+</section>
+</body>
+</html>

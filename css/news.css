@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+/* 페이지 위치 */
+.index{
+    width: 100%;
+    padding-top: 100px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.index .tabs{
+    margin: 0 auto;
+    border: 1px solid #acacac8e;
+    border-left: 0px;
+    border-right: 0px;
+    display: block;
+    text-align: center;
+    font-weight: 300;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+section .tabs p span{
+    margin: 0 10px;
+}
+section .tabs .selection{
+    color: #055C4D;
+    font-weight: 500;
+}
+
+
+/* 뉴스 목록 */
+.newsList{
+    margin-bottom: 70px;
+}
+.newsList table{
+    width: 1420px;
+    margin: 0 auto;
+    /* margin-top: 150px; */
+    margin-bottom: 70px;
+    border-collapse: collapse;
+    color: #1a1a1a;
+}
+.newsList table caption h2{
+    font-size: 60px;
+    font-weight: 500;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    text-align: center;
+    color: #055C4D;
+}
+.newsList table thead th{
+    height: 70px;
+    border-top: 1px solid #acacac67;
+    border-bottom: 1px solid #acacac67; 
+    padding: 12px 8px;
+    text-align: center;
+    font-weight: 600;
+}
+.newsList table thead .no, .newsList table thead .enterdate{
+    width: 265px;
+}
+.newsList table thead .title1{
+    width: 1148px;
+}
+/* .newsList table tbody tr:nth-child(1) td{border-top: none;} */
+.newsList table tbody tr td{
+    height: 70px;
+    text-align: center;
+    border-top: 1px solid #acacac67;
+    border-bottom: 1px solid #acacac67;
+    padding: 10px;
+}
+.newsList table tbody tr .realtit{
+    text-align: left;
+    white-space: nowrap;
+}
+.newsList table tbody tr .realtit a{
+    /* display: inline-block; */
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 50px;
+    transition: all 0.3s;
+}
+.newsList table tbody tr .realtit:hover a{
+    opacity: 0.8;
+}
+.newsList table tbody tr .realdate{
+    text-align: center;
+}
+
+.searchbg{
+    width: 860px;
+    margin: 0 auto;
+    /* margin-top: 100px; */
+    margin-bottom: 150px;
+    position: relative;
+}
+.searchbg .search{
+    width: 860px; height: 50px;
+    margin: 0 auto;
+    border: 1px solid #B8B3B3;
+    /* border-radius: 15px; */
+    padding-left: 20px; box-sizing: border-box;
+    outline: none;
+    color: #B8B3B3;
+    cursor: pointer;
+}
+.searchbg .fa-magnifying-glass{
+    position: absolute;
+    right: 25px; top: 18px;
+    cursor: pointer;
+}
+
+/* 검색결과 없음 레이아웃 */
+#empty-row td{
+    border-top: 1px solid #acacac67;
+    border-bottom: 1px solid #acacac67;
+    height: 350px; 
+    padding: 0;
+}
+.empty-box{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.empty-text{
+    font-size: 22px;
+    font-weight: 500;
+    color: #6b7280; 
+}
+.newsList.is-empty table tbody tr:not(#empty-row) td{
+    border-top: 0;
+    border-bottom: 0;
+}

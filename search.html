@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETF 라인업</title>
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="icon" type="image/png" href="images/favi.png">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/common.js" defer></script>
+    <script src="js/search.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="header-wrap">
+            <h1 class="logo"><a href="index.html"><img src="images/logo-header.png" alt="베르트 로고"></a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li>
+                        <a href="#">회사 소개</a>
+                        <ul class="sub">
+                            <li><a href="#">Verte ETF 소개</a></li>
+                            <li><a href="#">경영 정보</a></li>
+                            <li><a href="#">ESG 경영</a></li>
+                            <li><a href="#">인재 채용</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">ETF 정보</a>
+                        <ul class="sub">
+                            <li><a href="compare.html">ETF 비교·랭킹</a></li>
+                            <li><a href="search.html">ETF 라인업</a></li>
+                            <li><a href="#">ETF 트렌드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">MY ETF</a>
+                        <ul class="sub">
+                            <li><a href="personal.html">개인 맞춤형 추천</a></li>
+                            <li><a href="portfolio.html">포트폴리오 제안</a></li>
+                            <li><a href="fortune.html">오늘의 투자 운세</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">투자 정보</a>
+                        <ul class="sub">
+                            <li><a href="#">시장 전망</a></li>
+                            <li><a href="#">ETF 투자 정보</a></li>
+                            <li><a href="#">연금 투자</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="event.html">이벤트</a></li>
+                            <li><a href="community.html">자유게시판</a></li>
+                            <li><a href="news.html">ETF 뉴스</a></li>
+                            <li><a href="#">Q & A</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-btn">
+                <a href="join.html"><button>Join</button></a>
+                <a href="login.html"><button>Login</button></a>
+                <a href="mypage.html"><button>Mypage</button></a>
+            </div>
+        </div>
+    </header>
+
+<section class="searchsection">
+    <div class="searchbar">
+        <h2 class="searchTit">ETF 라인업</h2>
+<div class="searchBg">
+    <div class="searchBox">
+        <div class="searchInputWrap">
+            <input
+            type="search"
+            class="w-full pr-12 appearance-none
+                    outline-none focus:outline-none
+                    ring-0 focus:ring-0
+                    border-none focus:border-none"
+            placeholder="궁금한 내용을 입력하세요"
+            />
+
+            <button type="button" class="searchBtn">
+                <svg
+                class="h-[1.7em] text-[#4D7162] opacity-70 hover:opacity-100 transition"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                >
+                <g
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-width="2.5"
+                    fill="none"
+                    stroke="currentColor"
+                >
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.3-4.3"></path>
+                </g>
+                </svg>
+            </button>
+        </div>
+
+            <ul class="related-keywords hidden
+                        bg-white border border-gray-300 rounded-md shadow-md z-20">
+                <li class="p-3 text-gray-700 hover:bg-gray-100 cursor-pointer">연관검색어</li>
+                <li class="p-3 text-gray-700 hover:bg-gray-100 cursor-pointer"></li>
+                <li class="p-3 text-gray-700 hover:bg-gray-100 cursor-pointer"></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</section>
+
+    <main class="filter-search">
+        <section class="filtering w-[320px] shrink-0 p-6 bg-white">
+            <div class="filter-wrap">
+            <h3 class="text-3xl font-bold text-gray-800 mb-4 pb-4 border-b-2 border-gray-400">검색필터</h3>
+            <div class="filter-category space-y-10">
+                <div class="asset">
+                    <p class="text-sm font-bold mb-4">자산운용</p>
+                    <div class="flex flex-wrap gap-2">
+                        <button type="button" name="asset-cont" data-val="stock"
+                            class="flex items-center gap-2 w-full p-3 border border-gray-300 rounded-md text-sm bg-white text-gray-500 transition 
+                            [&.is-selected]:bg-[#055C4D] [&.is-selected]:text-white [&.is-selected]:border-[#1e1f7c]">
+                            <i class="fa-solid fa-check opacity-0"></i>주식
+                        </button>
+
+                        <button type="button" name="asset-cont" data-val="bond"
+                            class="flex items-center gap-2 w-full p-3 border border-gray-300 rounded-md text-sm bg-white text-gray-500 transition 
+                            [&.is-selected]:bg-[#055C4D] [&.is-selected]:text-white [&.is-selected]:border-[#1e1f7c] is-selected">
+                            <i class="fa-solid fa-check"></i>채권
+                        </button>
+
+                        <button type="button" name="asset-cont" data-val="mix"
+                            class="flex items-center gap-2 w-full p-3 border border-gray-300 rounded-md text-sm bg-white text-gray-500 transition 
+                            [&.is-selected]:bg-[#055C4D] [&.is-selected]:text-white [&.is-selected]:border-[#1e1f7c]">
+                            <i class="fa-solid fa-check opacity-0"></i>혼합
+                        </button>
+
+                        <button type="button" name="asset-cont" data-val="theme"
+                            class="flex items-center gap-2 w-full p-3 border border-gray-300 rounded-md text-sm bg-white text-gray-500 transition 
+                            [&.is-selected]:bg-[#055C4D] [&.is-selected]:text-white [&.is-selected]:border-[#1e1f7c]">
+                            <i class="fa-solid fa-check opacity-0"></i>테마
+                        </button>
+                    </div>
+                </div>
+            <div class="filter-group border-t border-gray-300 pt-6">
+                <p class="text-sm font-bold mb-4">지역</p>
+                <ul class="space-y-3">
+                    <li class="chk-item"><input type="checkbox" name="region"  data-val="all"> 전체 <span class="cnt">(369,476)</span></li>
+                    <li class="chk-item"><input type="checkbox" name="region" data-val="ko"> 한국 <span class="cnt">(5,678)</span></li>
+                    <li class="chk-item"><input type="checkbox" name="region" data-val="us"> 미국 <span class="cnt">(12,345)</span></li>
+                    <li class="chk-item"><input type="checkbox" name="region" data-val="global"> 글로벌 <span class="cnt">(1,234)</span></li>
+                    <li class="chk-item"><input type="checkbox" name="region" data-val="emerging"> 신흥 <span class="cnt">(391)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+        <section class="result">
+            <ul class="search-etf">
+                <li class="prod-box">
+                    <button class="cat-btn w-[80px] h-[30px] transition-transform duration-300 btn cursor-default border-[#1f87c3] bg-[#1f87c3] text-[#fff] 
+                                px-8 py-2 text-sm font-medium tracking-wide">해외주식</button>
+                    <div class="star-wrap flex gap-8 items-center">
+                        <div class="starreal-wrap">
+                            <i class="fa-regular fa-star"></i>
+                            <span class="text-yellow-400">
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                        </div>
+                        <div class="prod-name  whitespace-nowrap">KODEX 미국배당커버드콜액티브</div>
+                    </div>
+                    <div class="quan-wrap prod-cont">
+                        <div class="quantity">
+                            <span class="quant-tit">거래량</span>
+                            <span class="quant-quan">1,566,904 주</span>
+                        </div>
+                    </div>
+                    <div class="prod-info prod-cont">
+                        <ul class="profit">
+                            <li>수익률<span class="month"> (1개월)</span></li>
+                            <li class="percent">0.93%</li>
+                        </ul>
+                    </div>
+                    <div class="more-btn flex justify-end">
+                                <button class="cat-btn cursor-pointer  w-[120px] h-[40px] hover:scale-105 transition-transform btn cursor-default border-gray-400 bg-gray-400 text-[#fff] 
+                                px-8 text-sm font-medium tracking-wide" onclick="location.href='detailpage.html'">자세히 보기 &nbsp;></button>
+                    </div>
+                </li>
+                <li class="prod-box">
+                    <button class="cat-btn w-[80px] h-[30px] transition-transform duration-300 btn cursor-default border-[#1f87c3] bg-[#1f87c3] text-[#fff] 
+                                px-8 py-2 text-sm font-medium tracking-wide">해외주식</button>
+                    <div class="star-wrap flex gap-8 items-center flex-wrap: nowrap">
+                        <div class="starreal-wrap">
+                            <i class="fa-regular fa-star"></i>
+                            <span class="text-yellow-400">
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                        </div>
+                        <div class="prod-name  whitespace-nowrap">KODEX iShares 미국인플레이션국채액티브</div>
+                    </div>
+                    <div class="quan-wrap prod-cont">
+                        <div class="quantity">
+                            <span class="quant-tit">거래량</span>
+                            <span class="quant-quan">12,131 주</span>
+                        </div>
+                    </div>
+                    <div class="prod-info prod-cont">
+                        <ul class="profit">
+                            <li>수익률<span class="month"> (1개월)</span></li>
+                            <li class="percent minus-percent">-0.89%</li>
+                        </ul>
+                    </div>
+                    <div class="more-btn flex justify-end">
+                                <button class="cat-btn cursor-pointer  w-[120px] h-[40px] hover:scale-105 transition-transform btn cursor-default border-gray-400 bg-gray-400 text-[#fff] 
+                                px-8 text-sm font-medium tracking-wide" onclick="location.href='detailpage.html'">자세히 보기 &nbsp;></button>
+                    </div>
+                </li>
+                <li class="prod-box">
+                    <button class="cat-btn w-[80px] h-[30px] transition-transform duration-300 btn cursor-default border-[#1f87c3] bg-[#1f87c3] text-[#fff] 
+                                px-8 py-2 text-sm font-medium tracking-wide">해외주식</button>
+                    <div class="star-wrap flex gap-8 items-center">
+                        <div class="starreal-wrap">
+                            <i class="fa-regular fa-star"></i>
+                            <span class="text-yellow-400">
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                        </div>
+                        <div class="prod-name  whitespace-nowrap">KODEX 미국10년국채선물</div>
+                    </div>
+                    <div class="quan-wrap prod-cont">
+                        <div class="quantity">
+                            <span class="quant-tit">거래량</span>
+                            <span class="quant-quan">86,812 주</span>
+                        </div>
+                    </div>
+                    <div class="prod-info prod-cont">
+                        <ul class="profit">
+                            <li>수익률<span class="month"> (1개월)</span></li>
+                            <li class="percent minus-percent">-0.89%</li>
+                        </ul>
+                    </div>
+                    <div class="more-btn flex justify-end">
+                                <button class="cat-btn cursor-pointer  w-[120px] h-[40px] hover:scale-105 transition-transform btn cursor-default border-gray-400 bg-gray-400 text-[#fff] 
+                                px-8 text-sm font-medium tracking-wide" onclick="location.href='detailpage.html'">자세히 보기 &nbsp;></button>
+                    </div>
+                </li>
+                <li class="prod-box">
+                    <button class="cat-btn w-[80px] h-[30px] transition-transform duration-300 btn cursor-default border-[#1f87c3] bg-[#1f87c3] text-[#fff] 
+                                px-8 py-2 text-sm font-medium tracking-wide">해외주식</button>
+                    <div class="star-wrap flex gap-8 items-center">
+                        <div class="starreal-wrap">
+                            <i class="fa-regular fa-star"></i>
+                            <span class="text-yellow-400">
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                        </div>
+                        <div class="prod-name  whitespace-nowrap">KODEX 미국배당커버드콜액티브</div>
+                    </div>
+                    <div class="quan-wrap prod-cont">
+                        <div class="quantity">
+                            <span class="quant-tit">거래량</span>
+                            <span class="quant-quan">1,566,904주</span>
+                        </div>
+                    </div>
+                    <div class="prod-info prod-cont">
+                        <ul class="profit">
+                            <li>수익률<span class="month"> (1개월)</span></li>
+                            <li class="percent">0.93%</li>
+                        </ul>
+                    </div>
+                    <div class="more-btn flex justify-end">
+                                <button class="cat-btn cursor-pointer  w-[120px] h-[40px] hover:scale-105 transition-transform btn cursor-default border-gray-400 bg-gray-400 text-[#fff] 
+                                px-8 text-sm font-medium tracking-wide" onclick="location.href='detailpage.html'">자세히 보기 &nbsp;></button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <section>
+        <div class="flex justify-center mt-[100px] mb-[100px]">
+            <div class="join gap-2">
+                <button class="join-item btn btn-square border-gray-200 bg-white hover:bg-gray-50 shadow-none border"> < </button>
+                <button class="join-item btn btn-square border-gray-200 bg-white shadow-none !bg-[#055C4D] !text-white border border-[#055C4D] hover:text-white hover:bg-[#1e1f7c]">1</button>
+                <button class="join-item btn btn-square border-gray-200 bg-white shadow-none border hover:text-white hover:bg-[#055C4D]">2</button>
+                <button class="join-item btn btn-square border-gray-200 bg-white shadow-none border hover:text-white hover:bg-[#055C4D]">3</button>
+                <button class="join-item btn btn-square border-gray-200 bg-white shadow-none border hover:text-white hover:bg-[#055C4D]">4</button>
+                <button class="join-item btn btn-square border-gray-200 bg-white text-gray-600 hover:bg-gray-50 shadow-none border"> > </button>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <div class="footer-wrap">
+            <div class="footer-left">
+                <h1 class="logo"><a href="index.html"><img src="images/logo-footer.png" alt="베르트 로고 (화이트)"></a></h1>          
+            </div>
+
+            <div class="footer-right">
+
+                <ul class="footer-menu">
+                    <li>상호명 : 주식회사 베르트</li>
+                    <li>사업자등록번호 : 640-81-01354</li>
+                    <li>대표전화 : 031-902-1777</li>
+                    <li>EMAIL: verte@gmail.com </li>
+                    <li>경기도 고양시 일산동구 중앙로1275번길 38-10</li>
+                    <li>상담시간 : 평일 오전 9:00~오후 5:00</li>
+                    <li>점심시간 : 12:00 - 13:00(토-일요일,공휴일 휴무)</li>
+                </ul>
+                <p class="copyright">Copyright(C) 2025 VERTE MANAGEMENT CO. LTD. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

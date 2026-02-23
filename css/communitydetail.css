@@ -1,0 +1,348 @@
+@charset "UTF-8";
+
+/* 페이지 위치 */
+.tab-location{
+    width: 100%;
+    padding-top: 100px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.tab-location .tabs{
+    margin: 0 auto;
+    border: 1px solid #acacac8e;
+    border-left: 0px;
+    border-right: 0px;
+    display: block;
+    text-align: center;
+    font-weight: 300;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+section .tabs p span{
+    margin: 0 10px;
+}
+section .tabs .selection{
+    color: #055C4D;
+    font-weight: 500;
+}
+
+.tab-location h2{
+    font-size: 60px;
+    font-weight: 500;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    text-align: center;
+    color: #055C4D;
+}
+.tab-location .postBtnBg{
+    position: relative;
+}
+.tab-location .postBtnBg .postBtn {
+    width: 120px;
+    white-space: nowrap;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0px;
+    right: 253px;
+    margin-bottom: 20px;
+    border-radius: 0px;
+}
+.mbtn{
+    border-radius: 0px;
+}
+
+
+/* 자유게시판 본문 */
+.freeboardDetail {
+    width: 1400px;
+    height: 900px;
+    margin: 0 auto;
+    display: flex;
+    /* justify-content: space-around; */
+    /* gap: 5px; */
+    /* align-items: center; */
+    border: 1px solid #1d7a5548;
+    /* border-radius: 30px; */
+    margin-bottom: 70px;
+    overflow: hidden;
+}
+
+.freeboardDetail .freeboardTitle {
+    width: 1400px;
+    padding: 30px 30px;
+    /* border-bottom: 1px solid #1d7a5548; */
+    font-size: 20px;
+    font-weight: 500;
+}
+.freeboardDetail .freeboardTitle .titLine{
+    display: flex;
+    justify-content: space-between;
+    /* gap : 150px; */
+    align-items: center;
+}
+.freeboardDetail .freeboardTitle .titLine .likeicons .likeiconsBg{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.freeboardDetail .freeboardTitle .titLine .likeicons .likeiconsBg .like,
+.freeboardDetail .freeboardTitle .titLine .likeicons .likeiconsBg .bookmark{
+    position: relative;
+    width: 45px; height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.freeboardDetail .freeboardTitle .titLine .likeicons .likeiconsBg i{
+    position: absolute;
+    left: 0; top: 50%;
+    transform: translate(0%, -50%);
+}
+.freeboardDetail .freeboardTitle .titLine .likeicons .likeiconsBg>li .unemptyHeart,
+.freeboardDetail .freeboardTitle .titLine .likeicons .likeiconsBg>li .unemptyBookmark{
+    display: none;
+}
+.freeboardDetail .freeboardTitle .titLine .likeicons .likeiconsBg .like:hover .unemptyHeart{
+    display: block;
+}
+.freeboardDetail .freeboardTitle .titLine .likeicons .likeiconsBg .bookmark:hover .unemptyBookmark{
+    display: block;
+}
+
+.freeboardDetail .freeboardTitle .titLine .likeicons .likeiconsBg .like.active .emptyHeart,
+.freeboardDetail .freeboardTitle .titLine .likeicons .likeiconsBg .bookmark.active .emptyBookmark {
+    display: none;
+}
+
+
+.freeboardDetail .freeboardTitle .titLine .likeicons .likeiconsBg .like.active .unemptyHeart,
+.freeboardDetail .freeboardTitle .titLine .likeicons .likeiconsBg .bookmark.active .unemptyBookmark {
+    display: block;
+}
+
+.freeboardDetail .freeboardContent{
+    /* background-color: #055C4D; */
+    height: 800px;
+    padding: 30px 30px;
+    font-size: 16px;
+    font-weight: 400;
+    /* overflow: hidden; */
+    /* overflow-y: auto;
+    overflow-x: hidden; */
+}
+.freeboardDetail .freeboardContent .userInfo{
+    display: flex;
+    justify-content: space-between;
+    /* gap: 20px; */
+    margin-bottom: 20px;
+}
+.freeboardDetail .freeboardContent p{
+    font-size: 16px;
+    padding: 0px 30px;
+    box-sizing: border-box;
+}
+.contentimage{
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 30px;
+    /* padding-left: 30px; */
+    margin-bottom: 50px;
+}
+.contentimage img{
+    width: 80%; 
+    height: 100%;
+    margin: 0 auto;
+    padding: 0px 30px;
+}
+
+/* 댓글창 */
+.commentDetail {
+    width: 500px;
+    height: 100%;
+    margin: 0 auto;
+    /* border: 1px solid #1d7a5548; */
+    /* background-color: #F2FCFA; */
+    /* border-radius: 30px; */
+    margin-top: 120px;
+    margin-bottom: 100px;
+    /* overflow: hidden; */
+}
+.commentDetail .commenttit{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: left;
+    border-bottom: 1px solid #1d7a5548;
+    margin-bottom: 5px;
+    padding: 30px 40px;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+.commentDetail .comment .commentEnter .commentEnterBg{
+    width: 420px; height: 90px;
+    border: 1px solid #1d7a5548;
+    /* border-radius: 30px; */
+    margin: 0px 40px 0px;
+    overflow: hidden;
+    
+}
+.commentDetail .comment .head .headline{
+    width: 420px;
+    height: 40px;
+    margin: 20px auto 0px;
+    border: 1px solid #1d7a5548;
+    border-bottom: none;
+    background-color: #F2FCFA;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* line-height: 80px; */
+    padding: 5px 30px 5px;
+    /* margin-top: 50px; */
+    box-sizing: border-box;
+    position: relative;
+}
+.commentDetail .comment .commentEnter .commentEnterBg .head .headline .commentName{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.commentDetail .comment .postBtn{
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 45px;
+    font-size: 13px;
+    border-radius: 0px;
+}
+.commentDetail .comment .commentEnter .commentEnterBg .commentEnterCont{
+    height: 0px;
+    margin: 0 auto;
+    padding: 10px 25px; box-sizing: border-box;
+    font-size: 14px;
+}
+.commentDetail .comment .commentEnter .commentEnterBg .commentEnterCont textarea{
+    width: 100%; height: 70px;
+    padding: 5px 10px 30px;
+    box-sizing: border-box;
+    /* border-radius: 15px; */
+    resize: none;
+    outline: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* overflow-x: hidden; */
+}
+.commentDetail .comment .commentEnter .commentEnterBg .commentEnterCont textarea:placeholder-shown{
+    padding: 10px 10px;
+}
+.content-free{
+    width: 900px;
+    /* border-right: 1px solid #1d7a5548; */
+}
+.list-wrap{
+    height: 600px;
+    overflow: hidden;
+}
+.commentList{
+    /* width: 500px; */
+    height: 580px;
+    margin: 0 auto;
+    padding: 20px 0px;
+    /* padding-right: 20px; */
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* height: 100%; */
+}
+.commentList .commentListBg1{
+    width: 420px; height: 170px;
+    margin: 0 auto;
+    border: 1px solid #1d7a5548;
+    background-color: #fff;
+    /* border-radius: 30px; */
+    margin: 0px 40px;
+    margin-bottom: 30px;
+    padding: 5px 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.commentList .commentListBg1:last-child{
+    margin-bottom: 0;
+}
+.commentList .commentListBg1 .head .headline{
+    /* height: 30px; */
+    /* border-bottom: 1px solid #1d7a5548; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+}
+.commentList .commentListBg1 .head .headline .commentName{
+    font-size: 16px;
+}
+.commentList .commentListBg1 .head .headline .postDate{
+    font-size: 10px;
+    color: #B8B3B3;
+}
+.commentList .commentListBg1 .commentCont{
+    padding: 10px 30px; box-sizing: border-box;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+
+/* 최근 자유게시판 목록 */
+.freeboardList table{
+    width: 1620px;
+    margin: 0 auto;
+    /* margin-top: 150px; */
+    margin-bottom: 70px;
+    border-collapse: collapse;
+    color: #1a1a1a;
+}
+.freeboardList table caption h2{
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 150px;
+    margin-bottom: 30px;
+    text-align: left;
+    color: #055C4D;
+}
+.freeboardList table thead th{
+    height: 70px;
+    border-top: 1px solid #acacac67;
+    border-bottom: 1px solid #acacac67; 
+    padding: 12px 8px;
+    text-align: center;
+    font-weight: 500;
+}
+.freeboardList table thead .no, .freeboardList table thead .enterdate{
+    width: 265px;
+}
+.freeboardList table thead .title1{
+    width: 1148px;
+}
+.freeboardList table tbody tr:nth-child(1) td{border-top: none;}
+.freeboardList table tbody tr td{
+    height: 70px;
+    text-align: center;
+    border-top: 1px solid #acacac67;
+    border-bottom: 1px solid #acacac67;
+    margin: 10px 10px;
+}
+.freeboardList table tbody tr .realtit{
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.freeboardList table tbody tr .realtit:hover{
+    opacity: 0.8;
+}

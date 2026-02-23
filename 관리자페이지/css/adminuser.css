@@ -1,0 +1,135 @@
+@charset "UTF-8";
+/* 헤더 */
+.adminpage{
+    width: 100%;
+    min-height: 100vh;
+}
+.adminpage .adminpage-wrap{
+    display: flex;
+    min-height: 100vh;
+}
+.adminpage .adminpage-wrap .side-menu{
+    width: 260px;
+    background-color: #055C4D;
+    padding: 40px 24px;
+    box-sizing: border-box;
+}
+.adminpage .adminpage-wrap .side-menu .logo{
+    width: 200px;
+    height: 80px;
+    margin-bottom: 30px;
+}
+.adminpage .adminpage-wrap .side-menu .menu-list{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+.adminpage .adminpage-wrap .side-menu .menu-list li{
+    cursor: pointer;
+    transition: 0.2s;
+}
+.adminpage .adminpage-wrap .side-menu .menu-list li:first-child{
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+.adminpage .adminpage-wrap .side-menu .menu-list li:hover a{
+    opacity: 1;
+    font-weight: 700;
+}
+.adminpage .adminpage-wrap .side-menu .menu-list li a{
+    font-size: 18px;
+    color: #ffffff;
+    opacity: 0.6;
+}
+
+
+/* 회원목록 */
+.tablesection{
+    /* flex: 1; */
+    padding: 0px 40px;
+    box-sizing: border-box;
+}
+.tablesection table{
+    width: 1520px;
+    margin: 0 auto;
+    margin-bottom: 150px;
+    border-top: 2px solid #c2c2c2;
+    border-collapse: collapse;
+}
+.tablesection thead tr th{
+    width: 1520px;
+    margin: 0 auto;
+    text-align: center;
+}
+.tablesection thead tr .usertype,
+.tablesection thead tr .dangertype{
+    width: 150px;
+    text-align: center;
+    padding-right: 40px;
+    box-sizing: border-box;
+}     
+.tablesection th, td{
+    height: 70px;
+    border-bottom: 1px solid #ddd; 
+    padding: 12px 8px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.tablesection th{
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+.tablesection td{
+    color: #4b4b4b;
+}
+.tablesection .usertit-wrap{
+    width: 1520px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tablesection .usertit-wrap .user-tit{
+    text-align: left;
+    font-size: 50px;
+    font-weight: 500;
+    margin-top: 100px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+    color: #055C4D;
+}
+.tablesection .usertit-wrap>div{
+    padding-bottom: 30px;
+    box-sizing: border-box;
+}
+.tablesection .usertit-wrap .abtn{
+    margin-top: 100px;
+}
+.tablesection td > label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tablesection select {
+    min-width: 120px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.tablesection .mbtn{
+    width: 150px;
+    height: 50px;
+    border: 1px solid #4B4B4B;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-bottom: 150px;
+}
+.tablesection .mbtn .more{
+    display: block;
+    /* width: 100px; */
+    height: 80px;
+    font-size: 20px;
+    color: #1A1A1A;
+}

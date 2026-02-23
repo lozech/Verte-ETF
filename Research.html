@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="icon" href="./images/favi.png">
+    <link rel="stylesheet" href="./css/resurch.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <header>
+        <div class="header-wrap">
+            <h1 class="logo"><a href="index.html"><img src="images/logo-header.png" alt="베르트 로고"></a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li>
+                        <a href="#">회사 소개</a>
+                        <ul class="sub">
+                            <li><a href="#">Verte ETF 소개</a></li>
+                            <li><a href="#">경영 정보</a></li>
+                            <li><a href="#">ESG 경영</a></li>
+                            <li><a href="#">인재 채용</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">ETF 정보</a>
+                        <ul class="sub">
+                            <li><a href="compare.html">ETF 비교·랭킹</a></li>
+                            <li><a href="search.html">ETF 라인업</a></li>
+                            <li><a href="#">ETF 트렌드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">MY ETF</a>
+                        <ul class="sub">
+                            <li><a href="personal.html">개인 맞춤형 추천</a></li>
+                            <li><a href="portfolio.html">포트폴리오 제안</a></li>
+                            <li><a href="fortune.html">오늘의 투자 운세</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">투자 정보</a>
+                        <ul class="sub">
+                            <li><a href="#">시장 전망</a></li>
+                            <li><a href="#">ETF 투자 정보</a></li>
+                            <li><a href="#">연금 투자</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="event.html">이벤트</a></li>
+                            <li><a href="community.html">자유게시판</a></li>
+                            <li><a href="news.html">ETF 뉴스</a></li>
+                            <li><a href="#">Q & A</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-btn">
+                <a href="join.html"><button>Join</button></a>
+                <a href="login.html"><button>Login</button></a>
+                <a href="mypage.html"><button>Mypage</button></a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="test-container">
+            <h2>투자성향 TEST</h2>
+            <p>레벨에 맞는 정보탐색을 위해 아래 test를 진행해주세요.</p>
+            <div class="test-box1 flex flex-col gap-4">
+                <h3 class="text-base font-semibold text-gray-900">
+                    Q1. 투자 경험으로 가장 가까운 것은 무엇인가요?</h3>
+                <div class="flex flex-col gap-2 pl-4">
+                    <div class="flex flex-col gap-2">
+                        <div class="flex items-center gap-1">
+                            <input type="radio" id="q1-a" name="radio-7" value="A" class="radio peer" />
+                            <label for="q1-a" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            투자 경험이 거의 없거나 예·적금만 해봤다
+                            </label>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                            <input type="radio" id="q1-b" name="radio-7" value="B" class="radio peer" />
+                            <label for="q1-b" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            주식·ETF 투자를 해본 적은 있으나 횟수가 많지 않다
+                            </label>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                            <input type="radio" id="q1-c" name="radio-7" value="C" class="radio peer" />
+                            <label for="q1-c" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            ETF·주식을 정기적으로 운용하고 있다
+                            </label>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                            <input type="radio" id="q1-d" name="radio-7" value="D" class="radio peer" />
+                            <label for="q1-d" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            여러 자산을 분산해 장기간 투자하고 있다
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="test-box2 flex flex-col gap-4">
+                <h3 class="text-base font-semibold text-gray-900">
+                    Q2. ETF 상품 설명서를 볼 때 이해 정도는 어느 수준인가요?</h3>
+                <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-2 pl-4">
+                        <div class="flex items-center gap-1">
+                            <input type="radio" id="q2-a" name="q2" value="A" class="radio peer" />
+                            <label for="q2-a" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            용어가 어렵고 거의 이해되지 않는다</label>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <input type="radio" id="q2-b" name="q2" value="B" class="radio peer" />
+                            <label for="q2-b" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            기본 개념은 이해하지만 상세 구조는 어렵다</label>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                            <input type="radio" id="q2-c" name="q2" value="C" class="radio peer" />
+                            <label for="q2-c" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            대부분 이해하고 비교도 가능하다</label>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                            <input type="radio" id="q2-d" name="q2" value="D" class="radio peer" />
+                            <label for="q2-d" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            구성 종목과 전략까지 분석할 수 있다</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="test-box3 flex flex-col gap-4">
+                <h3 class="text-base font-semibold text-gray-900">
+                    Q3. 투자의 가장 큰 목적은 무엇인가요?</h3>
+                <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-2 pl-4">
+                        <div class="flex items-center gap-1">
+                            <input type="radio" id="q3-a" name="q3" value="A" class="radio peer" />
+                            <label for="q3-a" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            원금 손실 없이 자산을 지키는 것</label>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <input type="radio" id="q3-b" name="q3" value="B" class="radio peer" />
+                            <label for="q3-b" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            안정적인 수익을 꾸준히 얻는 것</label>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                            <input type="radio" id="q3-c" name="q3" value="C" class="radio peer" />
+                            <label for="q3-c" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            일정한 위험을 감수하고 수익을 키우는 것</label>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                            <input type="radio" id="q3-d" name="q3" value="D" class="radio peer" />
+                            <label for="q3-d" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            높은 변동성을 감수하더라도 큰 수익을 추구</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="test-box4 flex flex-col gap-4">
+                <h3 class="text-base font-semibold text-gray-900">
+                    Q4. 투자 자산이 단기간에 15% 하락했다면 어떻게 하시겠나요?</h3>
+                <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-2 pl-4">
+                        <div class="flex items-center gap-1">
+                            <input type="radio" id="q4-a" name="q4" value="A" class="radio peer" />
+                            <label for="q4-a" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            불안해서 바로 매도한다</label>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <input type="radio" id="q4-b" name="q4" value="B" class="radio peer" />
+                            <label for="q4-b" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            상황을 지켜보며 일부 정리한다</label>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                            <input type="radio" id="q4-c" name="q4" value="C" class="radio peer" />
+                            <label for="q4-c" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            유지하거나 추가 매수를 고려한다</label>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                            <input type="radio" id="q4-d" name="q4" value="D" class="radio peer" />
+                            <label for="q4-d" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            오히려 매수 기회라고 판단한다</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="test-box4 flex flex-col gap-4">
+                <h3 class="text-base font-semibold text-gray-900">
+                    Q5. 투자 자금을 운용할 계획 기간은 어느 정도인가요?</h3>
+                <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-2 pl-4">
+                        <div class="flex items-center gap-1">
+                            <input type="radio" id="q5-a" name="q5" value="A" class="radio peer" />
+                            <label for="q5-a" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            6개월 이내 단기</label>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <input type="radio" id="q5-b" name="q5" value="B" class="radio peer" />
+                            <label for="q5-b" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            6개월~1년</label>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                            <input type="radio" id="q5-c" name="q5" value="C" class="radio peer" />
+                            <label for="q5-c" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            1~3년</label>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                            <input type="radio" id="q5-d" name="q5" value="D" class="radio peer" />
+                            <label for="q5-d" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            3년 이상 장기</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="test-box4 flex flex-col gap-4">
+                <h3 class="text-base font-semibold text-gray-900">
+                    Q6. 시장 뉴스로 가격이 크게 오르내릴 때의 나의 반응은?</h3>
+                <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-2 pl-4">
+                        <div class="flex items-center gap-4">
+                            <input type="radio" id="q6-a" name="q6" value="A" class="radio peer" />
+                            <label for="q6-a" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            스트레스를 많이 느끼고 투자를 피하고 싶다</label>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <input type="radio" id="q6-b" name="q6" value="B" class="radio peer" />
+                            <label for="q6-b" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            불안하지만 감당할 수는 있다</label>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <input type="radio" id="q6-c" name="q6" value="C" class="radio peer" />
+                            <label for="q6-c" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            변동성은 투자 과정의 일부라고 생각한다</label>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                            <input type="radio" id="q6-d" name="q6" value="D" class="radio peer" />
+                            <label for="q6-d" class="text-sm p-2 rounded-md cursor-pointer transition hover:bg-[#467261]/15 peer-checked:bg-[#467261]/15 peer-checked:text-[#467261]">
+                            변동성이 클수록 기회라고 느낀다</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 버튼 -->
+            <div class="btnWrap flex justify-center">
+                <button class="w-[250px] h-[60px] bg-[#055C4D] text-white text-lg font-semibold tracking-wider rounded-md transition hover:bg-[#365a4c]"
+                onclick="location.href='result.html'">
+                    투자성향 확인하기<br>
+                </button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-wrap">
+            <div class="footer-left">
+                <h1 class="logo"><a href="index.html"><img src="images/logo-footer.png" alt="베르트 로고 (화이트)"></a></h1>          
+            </div>
+
+            <div class="footer-right">
+
+                <ul class="footer-menu">
+                    <li>상호명 : 주식회사 베르트</li>
+                    <li>사업자등록번호 : 640-81-01354</li>
+                    <li>대표전화 : 031-902-1777</li>
+                    <li>EMAIL: verte@gmail.com </li>
+                    <li>경기도 고양시 일산동구 중앙로1275번길 38-10</li>
+                    <li>상담시간 : 평일 오전 9:00~오후 5:00</li>
+                    <li>점심시간 : 12:00 - 13:00(토-일요일,공휴일 휴무)</li>
+                </ul>
+                <p class="copyright">Copyright(C) 2025 VERTE MANAGEMENT CO. LTD. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>운세 결과</title>
+    <link rel="stylesheet" href="css/outcome.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/common.js" defer></script>
+    <link rel="icon" type="image/png" href="images/favi.png">
+</head>
+<body>
+    <header>
+        <div class="header-wrap">
+            <h1 class="logo"><a href="index.html"><img src="images/logo-header.png" alt="베르트 로고"></a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li>
+                        <a href="#">회사 소개</a>
+                        <ul class="sub">
+                            <li><a href="#">Verte ETF 소개</a></li>
+                            <li><a href="#">경영 정보</a></li>
+                            <li><a href="#">ESG 경영</a></li>
+                            <li><a href="#">인재 채용</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">ETF 정보</a>
+                        <ul class="sub">
+                            <li><a href="compare.html">ETF 비교·랭킹</a></li>
+                            <li><a href="search.html">ETF 라인업</a></li>
+                            <li><a href="#">ETF 트렌드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">MY ETF</a>
+                        <ul class="sub">
+                            <li><a href="personal.html">개인 맞춤형 추천</a></li>
+                            <li><a href="portfolio.html">포트폴리오 제안</a></li>
+                            <li><a href="fortune.html">오늘의 투자 운세</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">투자 정보</a>
+                        <ul class="sub">
+                            <li><a href="#">시장 전망</a></li>
+                            <li><a href="#">ETF 투자 정보</a></li>
+                            <li><a href="#">연금 투자</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="event.html">이벤트</a></li>
+                            <li><a href="community.html">자유게시판</a></li>
+                            <li><a href="news.html">ETF 뉴스</a></li>
+                            <li><a href="#">Q & A</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-btn">
+                <a href="join.html"><button>Join</button></a>
+                <a href="login.html"><button>Login</button></a>
+                <a href="mypage.html"><button>Mypage</button></a>
+            </div>
+        </div>
+    </header>
+    <div class="bg-layer">
+        <div class="container">
+            <div class="fortune-box">
+                <div class="glass">
+                    <img src="images/aqua1.png" alt="">
+                </div>
+                    <h1 th:text="|✨ ${result.zodiacSign}의 오늘 운세|">
+                        물병자리의 운세</h1>
+                <p class="fortune-text" th:text="${result.fortuneText}">운세 내용 로딩 중...
+                </p>
+                <div class="keyword-badge">
+                    🔑 행운의 키워드: <span th:text="${result.keyword}">재물</span>
+                    → 추천 테마: <span th:text="${result.matchedTheme}">금융</span>
+                </div>
+            </div>
+
+            <div class="etf-section">
+                <div class="section-title">
+                    <span>🍀</span>
+                    <span>이 기운을 담은 추천 ETF</span>
+                </div>
+
+                <div th:if="${result.recommendEtfs.isEmpty()}" style="text-align: center;  padding: 20px; border-radius: 10px;">
+                    앗, 해당 테마의 ETF를 찾지 못했어요. <br> (테마: <span th:text="${result.matchedTheme}"></span>)
+                </div>
+
+                <a th:each="etf : ${result.recommendEtfs}"
+                th:href="@{/etf/detail/{isin}(isin=${etf.isinCd})}"
+                class="etf-card">
+                    <div class="etf-info">
+                        <h3 th:text="${etf.name}">KODEX 200</h3>
+                        <p>
+                            <span th:text="${etf.theme}">시장지수</span> |
+                            위험도 <span th:text="${etf.riskLevel}">2</span>등급
+                        </p>
+                    </div>
+                    <div class="arrow">➜</div>
+                </a>
+            </div>
+
+        </div>
+        <div class="last-links">
+            <a href="fortune.html" class="retry">다시 테스트 하기</a>
+            <a href="index.html" class="home">메인으로 돌아가기</a>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-wrap">
+            <div class="footer-left">
+                <h1 class="logo"><a href="index.html"><img src="images/logo-footer.png" alt="베르트 로고 (화이트)"></a></h1>          
+            </div>
+
+            <div class="footer-right">
+
+                <ul class="footer-menu">
+                    <li>상호명 : 주식회사 베르트</li>
+                    <li>사업자등록번호 : 640-81-01354</li>
+                    <li>대표전화 : 031-902-1777</li>
+                    <li>EMAIL: verte@gmail.com </li>
+                    <li>경기도 고양시 일산동구 중앙로1275번길 38-10</li>
+                    <li>상담시간 : 평일 오전 9:00~오후 5:00</li>
+                    <li>점심시간 : 12:00 - 13:00(토-일요일,공휴일 휴무)</li>
+                </ul>
+                <p class="copyright">Copyright(C) 2025 VERTE MANAGEMENT CO. LTD. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
