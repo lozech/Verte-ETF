@@ -431,6 +431,7 @@ header .header-btn button a{
     position: absolute;
     top: 8px;
     right: 8px;
+    cursor: pointer;
 }
 
 #search .transition-box .word-list{
@@ -442,9 +443,12 @@ header .header-btn button a{
     margin-top: 15px;
     transition-delay: 1.2s;
 }
-
+#search .word-list li:first-child{
+    cursor: default;
+}
 #search .word-list li{
     color: #055C4D;
+    cursor: pointer;
 }
 
 #search .word-list li:nth-of-type(1){
@@ -645,7 +649,7 @@ header .header-btn button a{
 #recommend .right .etf-list li .bookmark{
     width: 25px;
     position: absolute;
-    top: 30px;
+    top: 40px;
     right: 30px;
 }
 .bookmark.current {

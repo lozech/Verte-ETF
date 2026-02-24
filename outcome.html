@@ -93,9 +93,10 @@
                     앗, 해당 테마의 ETF를 찾지 못했어요. <br> (테마: <span th:text="${result.matchedTheme}"></span>)
                 </div>
 
-                <a th:each="etf : ${result.recommendEtfs}"
+                <!-- <a th:each="etf : ${result.recommendEtfs}"
                 th:href="@{/etf/detail/{isin}(isin=${etf.isinCd})}"
-                class="etf-card">
+                class="etf-card"> -->
+                <a href="detailpage.html" class="etf-card">
                     <div class="etf-info">
                         <h3 th:text="${etf.name}">KODEX 200</h3>
                         <p>
