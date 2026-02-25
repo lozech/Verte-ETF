@@ -23,10 +23,16 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    padding-top: 20px;
+    box-sizing: border-box;
 }
 .adminpage .adminpage-wrap .side-menu .menu-list li{
     cursor: pointer;
     transition: 0.2s;
+}
+.adminpage .adminpage-wrap .side-menu .menu-list li:first-child{
+    padding-top: 20px;
+    box-sizing: border-box;
 }
 .adminpage .adminpage-wrap .side-menu .menu-list li:hover a{
     opacity: 1;
@@ -37,7 +43,6 @@
     color: #ffffff;
     opacity: 0.6;
 }
-
 
 .addForm{
     width: 1500px;
@@ -101,9 +106,7 @@
     font-size: 15px;
     color: #B8B3B3;
 }
-.addForm fieldset table .td-col select{
-    width: 150px; 
-    height: 40px;
-    font-size: 16px;
-    box-sizing: border-box;
-}
+
+
+
+
